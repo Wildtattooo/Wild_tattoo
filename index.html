@@ -1,1 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>WILD TATTOO | Tattoo Studio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #151515;
+            color: white;
+        }
+
+        /* MENU */
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15,15,15,0.95);
+            border-bottom: 2px solid #f5c400;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo img {
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            color: #f5c400;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 70px;
+
+            background:
+                radial-gradient(circle,
+                #333333 0%,
+                #151515 60%,
+                #090909 100%);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-logo {
+            width: 260px;
+            max-width: 75%;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(50px, 9vw, 100px);
+            color: #f5c400;
+            letter-spacing: 8px;
+            font-weight: 900;
+        }
+
+        .hero h2 {
+            margin-top: 10px;
+            font-size: 25px;
+            letter-spacing: 4px;
+        }
+
+        .hero p {
+            margin: 25px auto;
+            max-width: 650px;
+            color: #cccccc;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .yellow {
+            background: #f5c400;
+            color: #111;
+        }
+
+        .outline {
+            border: 2px solid #f5c400;
+            color: #f5c400;
+        }
+
+        .outline:hover {
+            background: #f5c400;
+            color: #111;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 100px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title h2 {
+            font-size: 42px;
+            letter-spacing: 3px;
+        }
+
+        .line {
+            width: 70px;
+            height: 4px;
+            background: #f5c400;
+            margin: 15px auto;
+        }
+
+        .title p {
+            color: #aaa;
+        }
+
+        /* TATUAGEM */
+
+        #tattoo {
+            background: #202020;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #111;
+            padding: 35px 25px;
+            text-align: center;
+            border-bottom: 4px solid #f5c400;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #aaa;
+            line-height: 1.7;
+        }
+
+        /* PORTFÓLIO */
+
+        #portfolio {
+            background: #111;
+            text-align: center;
+        }
+
+        .portfolio-box {
+            border: 2px dashed #555;
+            padding: 80px 20px;
+            color: #777;
+        }
+
+        /* DESIGN */
+
+        #design {
+            background: #202020;
+        }
+
+        .design-text {
+            max-width: 750px;
+            margin: 0 auto 50px;
+            text-align: center;
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        .design-card {
+            border-top: 4px solid #087a4b;
+        }
+
+        .design-card h3 {
+            color: #f5c400;
+            margin-bottom: 15px;
+        }
+
+        /* CONTACTO */
+
+        #contacto {
+            text-align: center;
+            background: #111;
+        }
+
+        .contact-text {
+            max-width: 650px;
+            margin: auto;
+            color: #aaa;
+            line-height: 1.7;
+        }
+
+        .instagram {
+            background: #b51f2a;
+            color: white;
+        }
+
+        .whatsapp {
+            background: #087a4b;
+            color: white;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #080808;
+            color: #777;
+        }
+
+        footer strong {
+            color: #f5c400;
+        }
+
+        /* TELEMÓVEL */
+
+        @media (max-width: 800px) {
+
+            .menu {
+                gap: 10px;
+            }
+
+            .menu a {
+                font-size: 10px;
+            }
+
+            .logo span {
+                display: none;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                letter-spacing: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+
+            <img src="logo.jpg" alt="WILD TATTOO">
+
+            <span>WILD TATTOO</span>
+
+        </div>
+
+        <ul class="menu">
+
+            <li><a href="#inicio">INÍCIO</a></li>
+
+            <li><a href="#tattoo">TATUAGEM</a></li>
+
+            <li><a href="#portfolio">PORTFÓLIO</a></li>
+
+            <li><a href="#design">DESIGN & WEB</a></li>
+
+            <li><a href="#contacto">CONTACTO</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- INÍCIO -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <img src="logo.jpg"
+             alt="WILD TATTOO"
+             class="hero-logo">
+
+        <h1>WILD TATTOO</h1>
+
+        <h2>ARTE QUE FICA NA PELE.</h2>
+
+        <p>
+            Tatuagens personalizadas, criatividade e identidade.
+            Transformamos ideias em arte que te acompanha para sempre.
+        </p>
+
+        <a href="#contacto" class="button yellow">
+            MARCAR TATUAGEM
+        </a>
+
+        <a href="#portfolio" class="button outline">
+            VER PORTFÓLIO
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- TATUAGEM -->
+
+<section id="tattoo">
+
+    <div class="container">
+
+        <div class="title">
+
+            <h2>TATUAGEM</h2>
+
+            <div class="line"></div>
+
+            <p>O teu corpo. A tua história. A nossa arte.</p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>✒ Tatuagens Personalizadas</h3>
+
+                <p>
+                    Projetos criados especialmente para cada cliente,
+                    respeitando a tua ideia e personalidade.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>★ Projetos Exclusivos</h3>
+
+                <p>
+                    Cada tatuagem é pensada para ser única e especial.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>⚡ Arte & Criatividade</h3>
+
+                <p>
+                    Transformamos conceitos e ideias em arte na pele.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PORTFÓLIO -->
+
+<section id="portfolio">
+
+    <div class="container">
+
+        <div class="title">
+
+            <h2>PORTFÓLIO</h2>
+
+            <div class="line"></div>
+
+            <p>Alguns dos nossos trabalhos.</p>
+
+        </div>
+
+
+        <div class="portfolio-box">
+
+            <p>
+                📸 GALERIA DE TATUAGENS
+            </p>
+
+            <br>
+
+            <p>
+                Aqui vamos colocar as fotografias
+                dos trabalhos do WILD TATTOO.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DESIGN & WEB -->
+
+<section id="design">
+
+    <div class="container">
+
+        <div class="title">
+
+            <h2>DESIGN & WEB</h2>
+
+            <div class="line"></div>
+
+            <p>Criação para além da pele.</p>
+
+        </div>
+
+
+        <p class="design-text">
+
+            Além da tatuagem, ajudamos empresas e marcas
+            a construir a sua presença digital através de
+            websites, redes sociais e design.
+
+        </p>
+
+
+        <div class="cards">
+
+            <div class="card design-card">
+
+                <h3>🌐 Criação de Sites</h3>
+
+                <p>
+                    Websites modernos, profissionais e
+                    adaptados a cada negócio.
+                </p>
+
+            </div>
+
+
+            <div class="card design-card">
+
+                <h3>🛒 Lojas Online</h3>
+
+                <p>
+                    Criação de lojas online para apresentar
+                    produtos e vender na internet.
+                </p>
+
+            </div>
+
+
+            <div class="card design-card">
+
+                <h3>📱 Redes Sociais</h3>
+
+                <p>
+                    Gestão de Instagram e Facebook,
+                    publicações e stories.
+                </p>
+
+            </div>
+
+
+            <div class="card design-card">
+
+                <h3>🎨 Design Gráfico</h3>
+
+                <p>
+                    Flyers, cartazes, banners,
+                    publicidade e materiais gráficos.
+                </p>
+
+            </div>
+
+
+            <div class="card design-card">
+
+                <h3>✦ Logótipos</h3>
+
+                <p>
+                    Criação de logótipos e identidades
+                    visuais para marcas.
+                </p>
+
+            </div>
+
+
+            <div class="card design-card">
+
+                <h3>📸 Conteúdo Digital</h3>
+
+                <p>
+                    Imagens e conteúdos para websites,
+                    lojas online e redes sociais.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section id="contacto">
+
+    <div class="container">
+
+        <div class="title">
+
+            <h2>CONTACTO</h2>
+
+            <div class="line"></div>
+
+            <p>Vamos criar alguma coisa juntos.</p>
+
+        </div>
+
+
+        <div class="contact-text">
+
+            <p>
+                Queres marcar uma tatuagem ou pedir um orçamento
+                para um projeto de design ou website?
+            </p>
+
+
+            <br>
+
+            <a href="#" class="button instagram">
+                INSTAGRAM
+            </a>
+
+
+            <a href="#" class="button whatsapp">
+                WHATSAPP
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026 <strong>WILD TATTOO</strong> —
+    Todos os direitos reservados.
+
+</footer>
+
+</body>
+</html>
