@@ -118,20 +118,37 @@ button { font: inherit; }
   background: white;
   transition: .3s;
 }
-
-/* HERO */
 .hero {
-  min-height: 100svh;
   position: relative;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 80% 40%, rgba(245,196,0,.12), transparent 25%),
-    radial-gradient(circle at 20% 70%, #222, transparent 30%),
-    var(--black);
+  
+  /* 1. Fotografia como fundo + Degradê preto do lado esquerdo */
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 80%),
+    url('hero-tattoo.png');
+    
+  background-size: cover;
+  background-position: center right; /* Foca a ação da tatuadora no lado direito */
+  background-repeat: no-repeat;
+  
+  z-index: 1;
 }
 
+/* Garante que o texto fica sobre o fundo e alinhado */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 150px 20px 100px;
+}
+
+.hero-content {
+  max-width: 550px; /* Limita a largura do texto para não cobrir a mão da tatuadora */
+}
 .hero::after {
   content: "WILD";
   position: absolute;
