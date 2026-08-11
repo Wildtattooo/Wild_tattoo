@@ -59,3 +59,23 @@ window.addEventListener("scroll", () => {
     heroGrid.style.transform = `translateY(${y * 0.12}px)`;
   }
 }, { passive: true });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.getElementById('portfolioGrid');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  if (grid && prevBtn && nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      // Desliza para a direita a largura de 1 foto + espaço
+      const scrollAmount = grid.clientWidth / 3 + 15;
+      grid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+      // Desliza para a esquerda
+      const scrollAmount = grid.clientWidth / 3 + 15;
+      grid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+  }
+});
