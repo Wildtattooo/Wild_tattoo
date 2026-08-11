@@ -800,3 +800,29 @@ footer {
     grid-template-columns: 1fr !important;
   }
 }
+/* Força a galeria a ficar na horizontal (3 fotos lado a lado) */
+.portfolio-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important; /* 3 colunas horizontais de tamanho igual */
+  gap: 20px !important;
+  width: 100% !important;
+}
+
+/* Moldura retangular horizontal uniforme para cada foto */
+.portfolio-grid .project {
+  width: 100% !important;
+  height: 320px !important; /* Altura fixa para ficarem todas retas */
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background-color: #0d0d0d !important;
+  overflow: hidden !important;
+}
+
+/* Imagem preenche a moldura inteira sem distorcer */
+.portfolio-grid .project-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
