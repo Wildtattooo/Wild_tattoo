@@ -724,3 +724,24 @@ footer {
     url('hero-tattoo.png');
   background-position: center left; /* Foca a foto no lado esquerdo */
 }
+/* Correção definitiva de tamanho para todas as fotos da galeria */
+.portfolio-grid article,
+.work-grid article,
+.project {
+  height: 380px !important;
+  max-height: 380px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background-color: #0d0d0d !important;
+  overflow: hidden !important;
+}
+
+.portfolio-grid article img,
+.work-grid article img,
+.project-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
