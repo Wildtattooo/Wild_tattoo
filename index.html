@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WILD — Tattoo, Design & Web. Arte, identidade e experiências digitais.">
+  <title>WILD — Tattoo · Design · Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a class="brand" href="#inicio" aria-label="WILD início">
+        <img src="logo.jpg" alt="WILD">
+        <span>WILD<span class="accent">.</span></span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
+      <ul class="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#tattoo">Tattoo</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#design">Design & Web</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-grid"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow reveal">TATTOO / DESIGN / WEB</p>
+        <h1 class="hero-title reveal">MAKE IT<br><span>WILD.</span></h1>
+        <p class="hero-copy reveal">
+          Tatuamos ideias. Criamos identidades. Construímos experiências digitais.
+          <strong>Arte que não passa despercebida.</strong>
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#work" class="btn btn-primary">VER TRABALHOS <span>↗</span></a>
+          <a href="#contacto" class="btn btn-ghost">FALAR CONNOSCO</a>
+        </div>
+        <div class="hero-meta reveal">
+          <span>01 — CREATIVE STUDIO</span>
+          <span>PORTUGAL</span>
+        </div>
+      </div>
+      <a href="#tattoo" class="scroll-cue" aria-label="Descer">SCROLL <span>↓</span></a>
+    </section>
+
+    <section class="manifesto">
+      <div class="container manifesto-grid">
+        <p class="section-label">/ 001</p>
+        <div>
+          <p class="giant-text">WE DON'T<br><span>FOLLOW</span><br>THE LINE.</p>
+          <p class="manifesto-copy">
+            A WILD junta tatuagem, design e web num só espaço criativo.
+            O objetivo é simples: pegar numa ideia e transformá-la em algo
+            com identidade própria.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="tattoo">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-label">/ 002 — SERVICES</p>
+            <h2>O QUE<br><span>FAZEMOS.</span></h2>
+          </div>
+          <p>Três áreas. Uma só linguagem visual.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card tattoo-card reveal">
+            <span class="number">01</span>
+            <div class="service-icon">✦</div>
+            <h3>TATTOO</h3>
+            <p>O teu corpo. A tua história. A nossa arte.</p>
+            <ul>
+              <li>Tatuagens personalizadas</li>
+              <li>Projetos exclusivos</li>
+              <li>Arte & criatividade</li>
+            </ul>
+            <a href="#contacto">MARCAR SESSÃO ↗</a>
+          </article>
+
+          <article class="service-card design-card reveal" id="design">
+            <span class="number">02</span>
+            <div class="service-icon">◒</div>
+            <h3>DESIGN</h3>
+            <p>Identidade visual para marcas que querem ser vistas.</p>
+            <ul>
+              <li>Logótipos & identidade</li>
+              <li>Flyers, cartazes & banners</li>
+              <li>Conteúdo digital & redes sociais</li>
+            </ul>
+            <a href="#contacto">CRIAR IDENTIDADE ↗</a>
+          </article>
+
+          <article class="service-card web-card reveal">
+            <span class="number">03</span>
+            <div class="service-icon">⌁</div>
+            <h3>WEB</h3>
+            <p>Websites modernos feitos à medida do teu projeto.</p>
+            <ul>
+              <li>Websites profissionais</li>
+              <li>Lojas online</li>
+              <li>Experiências digitais</li>
+            </ul>
+            <a href="#contacto">CRIAR WEBSITE ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-label">/ 003 — SELECTED WORK</p>
+            <h2>FEITO<br><span>PELA WILD.</span></h2>
+          </div>
+          <p>Adiciona aqui fotografias das tatuagens e projetos de design/web.</p>
+        </div>
+
+        <div class="filters reveal" role="tablist" aria-label="Filtrar trabalhos">
+          <button class="filter active" data-filter="all">ALL</button>
+          <button class="filter" data-filter="tattoo">TATTOO</button>
+          <button class="filter" data-filter="design">DESIGN</button>
+          <button class="filter" data-filter="web">WEB</button>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="project project-placeholder tattoo reveal" data-type="tattoo">
+            <div class="project-inner"><span>TATTOO</span><strong>01</strong></div>
+          </article>
+          <article class="project project-placeholder design reveal" data-type="design">
+            <div class="project-inner"><span>DESIGN</span><strong>02</strong></div>
+          </article>
+          <article class="project project-placeholder web reveal" data-type="web">
+            <div class="project-inner"><span>WEB</span><strong>03</strong></div>
+          </article>
+          <article class="project project-placeholder design reveal" data-type="design">
+            <div class="project-inner"><span>DESIGN</span><strong>04</strong></div>
+          </article>
+          <article class="project project-placeholder tattoo reveal" data-type="tattoo">
+            <div class="project-inner"><span>TATTOO</span><strong>05</strong></div>
+          </article>
+          <article class="project project-placeholder web reveal" data-type="web">
+            <div class="project-inner"><span>WEB</span><strong>06</strong></div>
+          </article>
+        </div>
+
+        <p class="portfolio-note">As caixas acima são placeholders — substitui-as pelas tuas imagens quando quiseres.</p>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container about-grid">
+        <p class="section-label">/ 004 — WILD MINDSET</p>
+        <div class="about-copy reveal">
+          <p class="quote">“A tua ideia não precisa de parecer com todas as outras.”</p>
+          <p>
+            Seja na pele, numa marca ou num ecrã, trabalhamos para criar
+            algo que tenha personalidade. Menos genérico. Mais WILD.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="container contact-inner">
+        <p class="section-label reveal">/ 005 — CONTACT</p>
+        <h2 class="contact-title reveal">LET'S MAKE<br><span>SOMETHING WILD.</span></h2>
+        <p class="contact-copy reveal">
+          Queres marcar uma tatuagem ou pedir um orçamento para design ou web?
+          Conta-nos a tua ideia.
+        </p>
+        <div class="contact-actions reveal">
+          <a href="#" class="btn btn-primary">INSTAGRAM ↗</a>
+          <a href="#" class="btn btn-outline-green">WHATSAPP ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <strong>WILD<span class="accent">.</span></strong>
+      <span>TATTOO · DESIGN · WEB</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
