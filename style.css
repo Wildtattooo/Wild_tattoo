@@ -880,3 +880,25 @@ footer {
   padding-bottom: 40px !important; /* Espaço extra na parte inferior do cartão */
   min-height: 480px !important;    /* Garante uma altura confortável */
 }
+/* Organização da secção FEITO PELA WILD */
+.portfolio-header {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  margin-bottom: 35px !important;
+}
+
+/* Botões de filtro abaixo do título */
+.filter-buttons {
+  display: flex !important;
+  gap: 12px !important;
+  margin-top: 20px !important;
+  margin-bottom: 25px !important;
+}
+
+/* Grelha de fotos a ocupar a largura total por baixo */
+.portfolio-grid {
+  width: 100% !important;
+  margin-top: 10px !important;
+}
