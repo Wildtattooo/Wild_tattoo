@@ -767,3 +767,36 @@ footer {
     url('hero-tattoo.png');
   background-position: center right; /* Foca a ação da foto na direita */
 }
+
+/* Layout de 3 colunas perfeitamente alinhadas */
+.portfolio-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important; /* Força 3 colunas iguais lado a lado */
+  gap: 20px !important;
+  align-items: stretch !important;
+}
+
+/* Moldura idêntica para todas as caixas */
+.portfolio-grid .project {
+  height: 360px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background-color: #0d0d0d !important;
+  overflow: hidden !important;
+}
+
+/* Preenchimento perfeito da imagem dentro da moldura */
+.portfolio-grid .project-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+/* Ajuste para ecrãs mais pequenos/telemóveis */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
