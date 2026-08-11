@@ -868,3 +868,15 @@ footer {
 .btn-budget:hover span {
   transform: translateX(5px) !important; /* Move a seta para a direita */
 }
+/* Empurra os botões PEDIR ORÇAMENTO mais para baixo */
+.service-card .btn-budget,
+.services-card .btn-budget {
+  margin-top: 35px !important; /* Aumenta a distância do texto superior */
+}
+
+/* Aumenta a altura dos cartões para dar mais espaço no fundo */
+.services-grid .service-card,
+.service-card {
+  padding-bottom: 40px !important; /* Espaço extra na parte inferior do cartão */
+  min-height: 480px !important;    /* Garante uma altura confortável */
+}
