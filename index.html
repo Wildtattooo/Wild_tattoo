@@ -154,33 +154,37 @@
           <p>Adiciona aqui fotografias das tatuagens e projetos de design/web.</p>
         </div>
 
-        <div class="filters reveal" role="tablist" aria-label="Filtrar trabalhos">
-          <button class="filter active" data-filter="all">ALL</button>
-          <button class="filter" data-filter="tattoo">TATTOO</button>
-          <button class="filter" data-filter="design">DESIGN</button>
-          <button class="filter" data-filter="web">WEB</button>
-        </div>
+       <div class="filters reveal" role="tablist" aria-label="Filtrar trabalhos">
+        <button class="filter active" data-filter="tattoo">TATTOO</button>
+        <button class="filter" data-filter="design">DESIGN</button>
+        <button class="filter" data-filter="web">WEB</button>
+      </div>
 
-        <div class="portfolio-grid">
-          <article class="project project-placeholder tattoo reveal" data-type="tattoo">
-            <div class="project-inner"><span>TATTOO</span><strong>01</strong></div>
-          </article>
-          <article class="project project-placeholder design reveal" data-type="design">
-            <div class="project-inner"><span>DESIGN</span><strong>02</strong></div>
-          </article>
-          <article class="project project-placeholder web reveal" data-type="web">
-            <div class="project-inner"><span>WEB</span><strong>03</strong></div>
-          </article>
-          <article class="project project-placeholder design reveal" data-type="design">
-            <div class="project-inner"><span>DESIGN</span><strong>04</strong></div>
-          </article>
-          <article class="project project-placeholder tattoo reveal" data-type="tattoo">
-            <div class="project-inner"><span>TATTOO</span><strong>05</strong></div>
-          </article>
-          <article class="project project-placeholder web reveal" data-type="web">
-            <div class="project-inner"><span>WEB</span><strong>06</strong></div>
-          </article>
-        </div>
+       <div class="portfolio-grid">
+        <!-- TATTOO -->
+        <article class="project project-placeholder tattoo reveal" data-type="tattoo">
+          <div class="project-inner"><span>TATTOO</span><strong>01</strong></div>
+        </article>
+        <article class="project project-placeholder tattoo reveal" data-type="tattoo">
+          <div class="project-inner"><span>TATTOO</span><strong>02</strong></div>
+        </article>
+
+        <!-- DESIGN -->
+        <article class="project project-placeholder design reveal" data-type="design" style="display: none;">
+          <div class="project-inner"><span>DESIGN</span><strong>01</strong></div>
+        </article>
+        <article class="project project-placeholder design reveal" data-type="design" style="display: none;">
+          <div class="project-inner"><span>DESIGN</span><strong>02</strong></div>
+        </article>
+
+        <!-- WEB -->
+        <article class="project project-placeholder web reveal" data-type="web" style="display: none;">
+          <div class="project-inner"><span>WEB</span><strong>01</strong></div>
+        </article>
+        <article class="project project-placeholder web reveal" data-type="web" style="display: none;">
+          <div class="project-inner"><span>WEB</span><strong>02</strong></div>
+        </article>
+      </div>
 
         <p class="portfolio-note">As caixas acima são placeholders — substitui-as pelas tuas imagens quando quiseres.</p>
       </div>
