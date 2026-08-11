@@ -768,108 +768,41 @@ footer {
   background-position: center right; /* Foca a ação da foto na direita */
 }
 
-/* Layout de 3 colunas perfeitamente alinhadas */
-.portfolio-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important; /* Força 3 colunas iguais lado a lado */
-  gap: 20px !important;
-  align-items: stretch !important;
+/* FORÇAR 3 QUADRADOS LADO A LADO NA HORIZONTAL */
+.portfolio-grid,
+.work-grid {
+  display: flex !important;
+  flex-direction: row !important; /* Força linha horizontal */
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 15px !important;
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin: 30px auto !important;
 }
 
-/* Moldura idêntica para todas as caixas */
-.portfolio-grid .project {
-  height: 360px !important;
+.portfolio-grid article,
+.portfolio-grid .project,
+.work-grid article,
+.work-grid .project {
+  flex: 1 1 0px !important; /* Garante larguras 100% iguais */
+  width: 100% !important;
+  aspect-ratio: 1 / 1 !important; /* FORÇA QUADRADO PERFEITO */
+  height: auto !important;
+  max-height: none !important;
+  min-height: 0 !important;
   border-radius: 8px !important;
+  overflow: hidden !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   background-color: #0d0d0d !important;
-  overflow: hidden !important;
 }
 
-/* Preenchimento perfeito da imagem dentro da moldura */
-.portfolio-grid .project-img {
+.portfolio-grid img,
+.work-grid img,
+.project-img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important;
+  object-fit: cover !important; /* Preenche o quadrado sem distorcer */
   object-position: center !important;
   display: block !important;
-}
-
-/* Ajuste para ecrãs mais pequenos/telemóveis */
-@media (max-width: 768px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-/* Força a galeria a ficar na horizontal (3 fotos lado a lado) */
-.portfolio-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important; /* 3 colunas horizontais de tamanho igual */
-  gap: 20px !important;
-  width: 100% !important;
-}
-
-/* Moldura retangular horizontal uniforme para cada foto */
-.portfolio-grid .project {
-  width: 100% !important;
-  height: 320px !important; /* Altura fixa para ficarem todas retas */
-  border-radius: 8px !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  background-color: #0d0d0d !important;
-  overflow: hidden !important;
-}
-
-/* Imagem preenche a moldura inteira sem distorcer */
-.portfolio-grid .project-img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  display: block !important;
-}
-/* Grelha de 3 colunas horizontais */
-.portfolio-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important; /* Força 3 colunas iguais */
-  gap: 15px !important; /* Espaço pequeno entre as fotos, estilo Insta */
-  width: 100% !important;
-  max-width: 1000px !important; /* Limita a largura máxima da grelha para não esticar muito */
-  margin: 0 auto !important; /* Centra a grelha na página */
-}
-
-/* Força cada caixa a ser um quadrado perfeito */
-.portfolio-grid .project {
-  display: block !important;
-  width: 100% !important;
-  /* ESTA É A LINHA MÁGICA PARA O QUADRADO PERFEITO */
-  aspect-ratio: 1 / 1 !important; 
-  
-  border-radius: 4px !important; /* Cantos ligeiramente arredondados, mais profissional */
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
-  background-color: #0d0d0d !important;
-  overflow: hidden !important;
-  margin: 0 !important;
-}
-
-/* Imagem preenche o quadrado sem distorcer, centrada */
-.portfolio-grid .project-img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important; /* Recorta a foto para preencher o quadrado mantendo a proporção */
-  object-position: center !important; /* Centra o corte na imagem */
-  display: block !important;
-  transition: transform 0.3s ease !important;
-}
-
-/* Efeito de zoom ao passar o rato (hover) */
-.portfolio-grid .project:hover .project-img {
-  transform: scale(1.05) !important;
-}
-
-/* Ajuste para telemóveis (passa para 1 coluna se o ecrã for muito pequeno) */
-@media (max-width: 600px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr !important;
-    gap: 10px !important;
-    padding: 0 15px !important;
-  }
 }
