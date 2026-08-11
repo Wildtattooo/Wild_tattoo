@@ -703,3 +703,24 @@ footer {
 .project:hover .project-img {
   transform: scale(1.05);
 }
+/* Mudar o alinhamento de todo o bloco do Hero para o lado direito */
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Empurra o conteúdo para a direita */
+  text-align: right;     /* Alinha o texto à direita */
+  margin-left: auto;     /* Garante o posicionamento no lado direito */
+}
+
+/* Alinha os botões à direita */
+.hero-actions {
+  justify-content: flex-end;
+}
+
+/* Inverte o degradê de fundo para a sombra ficar no lado direito */
+.hero {
+  background-image: 
+    linear-gradient(to left, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 80%),
+    url('hero-tattoo.png');
+  background-position: center left; /* Foca a foto no lado esquerdo */
+}
