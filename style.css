@@ -745,3 +745,25 @@ footer {
   object-position: center !important;
   display: block !important;
 }
+/* Reverter o alinhamento para o LADO ESQUERDO */
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha tudo à esquerda */
+  text-align: left;        /* Texto alinhado à esquerda */
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Alinha os botões à esquerda */
+.hero-actions {
+  justify-content: flex-start;
+}
+
+/* Degradê com sombra escura na esquerda para destacar o texto sobre a foto */
+.hero {
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.9) 25%, rgba(0,0,0,0.65) 55%, rgba(0,0,0,0) 85%),
+    url('hero-tattoo.png');
+  background-position: center right; /* Foca a ação da foto na direita */
+}
