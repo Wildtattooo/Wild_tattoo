@@ -939,3 +939,76 @@ footer {
     transform: translateX(-50%);
   }
 }
+/* Estrutura do Carrossel */
+.carousel-wrapper {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+}
+
+/* Área de fotos com Scroll Suave escondido */
+.carousel-wrapper .portfolio-grid {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 15px !important;
+  overflow-x: auto !important;
+  scroll-behavior: smooth !important;
+  width: 100% !important;
+  padding: 10px 0 !important;
+  scrollbar-width: none !important; /* Esconde barra no Firefox */
+}
+
+.carousel-wrapper .portfolio-grid::-webkit-scrollbar {
+  display: none !important; /* Esconde barra no Chrome/Safari/Opera */
+}
+
+/* Quadrados perfeitos dentro do carrossel */
+.carousel-wrapper .project {
+  flex: 0 0 calc(33.333% - 10px) !important; /* Mostra exatamente 3 fotos */
+  min-width: calc(33.333% - 10px) !important;
+  aspect-ratio: 1 / 1 !important;
+  margin: 0 !important;
+}
+
+/* Botões das Setas Amarelas */
+.carousel-arrow {
+  background-color: #ffc700 !important;
+  color: #000000 !important;
+  border: none !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 10 !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+.carousel-arrow:hover {
+  background-color: #ffffff !important;
+  transform: scale(1.1) !important;
+}
+
+.prev-btn {
+  margin-right: 12px !important;
+}
+
+.next-btn {
+  margin-left: 12px !important;
+}
+
+/* Ajuste em telemóveis (mostra 1 foto quase inteira por vez) */
+@media (max-width: 600px) {
+  .carousel-wrapper .project {
+    flex: 0 0 85% !important;
+    min-width: 85% !important;
+  }
+}
