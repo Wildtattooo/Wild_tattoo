@@ -902,3 +902,40 @@ footer {
   width: 100% !important;
   margin-top: 10px !important;
 }
+/* ESTILO E ANIMAÇÃO DA FAIXA INFINITA (MARQUEE) */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffc700; /* Fundo Amarelo Neon */
+  color: #000000;            /* Texto Preto */
+  padding: 12px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  user-select: none;
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: marquee-scroll 20s linear infinite;
+}
+
+.marquee-track span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-right: 20px;
+}
+
+/* Animação contínua da esquerda para a direita */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
