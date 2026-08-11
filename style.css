@@ -806,3 +806,65 @@ footer {
   object-position: center !important;
   display: block !important;
 }
+/* Espaçamento e estrutura das cartas de serviços */
+.services-grid .service-card,
+.service-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 35px 25px !important;
+  min-height: 440px !important;
+}
+
+.service-card ul,
+.services-list {
+  margin-bottom: 30px !important;
+}
+
+/* BOTÃO DE IMPACTO "PEDIR ORÇAMENTO" */
+.btn-budget {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+  padding: 14px 20px !important;
+  margin-top: auto !important;
+  
+  background-color: transparent !important;
+  color: #ffc700 !important;
+  border: 2px solid #ffc700 !important;
+  border-radius: 6px !important;
+  
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  
+  cursor: pointer !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 0 12px rgba(255, 199, 0, 0.15) !important;
+}
+
+/* Seta animada dentro do botão */
+.btn-budget span {
+  display: inline-block !important;
+  transition: transform 0.3s ease !important;
+  font-size: 1.1rem !important;
+}
+
+/* Efeito ao passar o rato (Hover) */
+.btn-budget:hover {
+  background-color: #ffc700 !important;
+  color: #000000 !important;
+  box-shadow: 0 0 25px rgba(255, 199, 0, 0.6) !important; /* Brilho Néon */
+  transform: translateY(-3px) !important;
+}
+
+.btn-budget:hover span {
+  transform: translateX(5px) !important; /* Move a seta para a direita */
+}
