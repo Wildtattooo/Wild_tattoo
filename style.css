@@ -1149,34 +1149,49 @@ footer {
   }
 }
 /* ========================================================
-   ESPAÇAMENTO LIMPO E EDITORIAL PARA TELEMÓVEL
+   AJUSTE ESPECÍFICO MOBILE: SECÇÃO HERO "MAKE IT WILD"
    ======================================================== */
 @media (max-width: 768px) {
 
-  /* Margens laterais generosas para dar espaço e respiro ao texto */
-  main, 
-  section, 
-  header nav {
-    padding-left: 8vw !important;  /* Adapta o espaçamento ao tamanho do ecrã */
-    padding-right: 8vw !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Alinhamento à esquerda com margens limpas */
-  h1, h2, h3, p, span, article {
+  /* Seleciona apenas a primeira secção da página (Hero) */
+  main > section:first-of-type {
+    /* Define um espaçamento lateral generoso e limpo (ex: 15% da largura do ecrã) */
+    padding-left: 15vw !important; 
+    padding-right: 10vw !important;
+    
+    /* Garante alinhamento vertical e à esquerda */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
     text-align: left !important;
+    min-height: 80vh !important; /* Mantém a altura para impacto visual */
+  }
+
+  /* Ajusta o tamanho e quebra do título grande */
+  main > section:first-of-type h1 {
+    font-size: clamp(2.2rem, 12vw, 3.8rem) !important;
+    line-height: 1.1 !important;
     margin-left: 0 !important;
+    margin-bottom: 1.5rem !important;
   }
 
-  /* Garante que nenhum bloco ultrapassa a largura e cria barra de scroll */
-  div, section, article {
+  /* Ajusta o parágrafo de descrição e os botões */
+  main > section:first-of-type p,
+  main > section:first-of-type div {
+    margin-left: 0 !important;
+    text-align: left !important;
     max-width: 100% !important;
-    box-sizing: border-box !important;
   }
 
-  /* Ajusta o espaçamento interno das caixas de serviços e galeria */
-  article {
-    padding: 24px !important;
-    margin-bottom: 20px !important;
+  /* Garante que os botões "Ver Trabalhos" e "Falar Connosco" alinham à esquerda */
+  main > section:first-of-type div a {
+    display: inline-block !important; /* Mantém lado a lado se couber */
+    margin-right: 10px !important;
+    margin-bottom: 10px !important;
+    text-align: left !important;
+    width: auto !important; /* Não força largura total nesta secção */
+  }
+}
   }
 }
