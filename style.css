@@ -403,35 +403,104 @@ section:nth-of-type(4) article div strong {
   color: #ffee00;
 }
 
-/* 10. FAQ (PERGUNTAS FREQUENTES)
+/* ==========================================================================
+   SECÇÃO PERGUNTAS FREQUENTES (FAQ) — CARTOES & BOTÕES INTERATIVOS
    ========================================================================== */
-section:nth-of-type(6) details {
-  background: #141414;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  margin-bottom: 1rem;
-  padding: 1.2rem 1.5rem;
+.faq-section {
+  padding: 5rem 6vw !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
 }
 
-section:nth-of-type(6) summary {
-  font-weight: 700;
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.05rem;
+.faq-tag {
+  font-size: 0.85rem !important;
+  letter-spacing: 3px !important;
+  opacity: 0.5 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1rem !important;
 }
 
-section:nth-of-type(6) summary span {
-  color: #ffee00;
-  font-size: 1.4rem;
+.faq-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.2rem !important;
+  margin-top: 2.5rem !important;
 }
 
-section:nth-of-type(6) details p {
-  margin-top: 1rem;
-  opacity: 0.7;
-  font-size: 0.95rem;
-  line-height: 1.6;
+/* Cartão / Botão de cada Pergunta */
+.faq-card {
+  background-color: #141414 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Efeito ao passar o rato */
+.faq-card:hover {
+  border-color: #ffee00 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Estado Aberto (quando o utilizador clica na pergunta) */
+.faq-card[open] {
+  border-color: #ffee00 !important;
+  background-color: #181818 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Botão da Pergunta (Cabeçalho) */
+.faq-header {
+  padding: 1.4rem 1.8rem !important;
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  color: #ffffff !important;
+  user-select: none !important;
+  transition: color 0.3s ease !important;
+}
+
+/* Esconde a seta predefinida do navegador */
+.faq-header::-webkit-details-marker {
+  display: none !important;
+}
+
+.faq-card:hover .faq-header {
+  color: #ffee00 !important;
+}
+
+/* Ícone de Mais (+) */
+.faq-icon {
+  color: #ffee00 !important;
+  font-size: 1.5rem !important;
+  font-weight: 900 !important;
+  transition: transform 0.3s ease !important;
+  line-height: 1 !important;
+  margin-left: 1rem !important;
+}
+
+/* Roda o ícone (+) para virar (x) quando a resposta se abre */
+.faq-card[open] .faq-icon {
+  transform: rotate(45deg) !important;
+}
+
+/* Caixa/Painel da Resposta */
+.faq-content {
+  padding: 0 1.8rem 1.6rem 1.8rem !important;
+  border-top: 1px solid rgba(255, 238, 0, 0.15) !important;
+  margin-top: 0.2rem !important;
+}
+
+.faq-content p {
+  opacity: 0.85 !important;
+  font-size: 0.98rem !important;
+  line-height: 1.6 !important;
+  color: #dddddd !important;
+  padding-top: 1.2rem !important;
 }
 
 /* 11. CONTACTOS & FOOTER
