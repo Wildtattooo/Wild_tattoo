@@ -246,28 +246,43 @@ section p:first-child {
   text-transform: uppercase;
 }
 
-/* 7. FAIXA DESLIZANTE / MARQUEE
+/* ==========================================================================
+   FAIXA DESLIZANTE / MARQUEE (AMARELO E EM MOVIMENTO CONTINUO)
    ========================================================================== */
-main > div:nth-of-type(2) {
-  width: 100%;
-  overflow: hidden;
-  background: #ffee00; /* Marquee Amarelo */
-  color: #0d0d0d;
-  padding: 1rem 0;
-  white-space: nowrap;
+.marquee-container {
+  width: 100% !important;
+  overflow: hidden !important;
+  background-color: #ffee00 !important; /* Fundo Amarelo */
+  color: #0d0d0d !important;             /* Texto Preto */
+  padding: 1.2rem 0 !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  margin: 3rem 0 !important;
 }
 
-main > div:nth-of-type(2) div {
-  display: inline-block;
-  animation: marquee 25s linear infinite;
-  font-weight: 900;
-  letter-spacing: 2px;
-  font-size: 0.9rem;
+.marquee-content {
+  display: inline-block !important;
+  white-space: nowrap !important;
+  animation: marquee-animation 20s linear infinite !important;
+  font-weight: 900 !important;
+  letter-spacing: 2.5px !important;
+  font-size: 1rem !important;
+  text-transform: uppercase !important;
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+.marquee-content span {
+  display: inline-block !important;
+}
+
+/* Animação que faz a faixa deslizar continuamente */
+@keyframes marquee-animation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* 8. SERVIÇOS
