@@ -1068,3 +1068,43 @@ footer {
     cursor: pointer;
   }
 }
+/* ========================================================
+   REGRAS DE OTIMIZAÇÃO MOBILE (max-width: 768px)
+   ======================================================== */
+@media (max-width: 768px) {
+
+  /* Impede o scroll horizontal indesejado */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Redimensionamento responsivo dos títulos */
+  h1 {
+    font-size: clamp(2.4rem, 10vw, 3.8rem) !important;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 8vw, 2.6rem) !important;
+  }
+
+  /* Garante 1 coluna para os serviços e galeria */
+  section article, 
+  .work-grid, 
+  .services-grid {
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Botões com largura total para facilitar o clique com o polegar */
+  div a[href*="contacto"], 
+  div a[href*="wa.me"], 
+  div a[href*="instagram"] {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 18px;
+    box-sizing: border-box;
+  }
+}
