@@ -547,22 +547,36 @@ footer {
 }
 
 /* MOBILE */
-@media (max-width: 800px) {
-  .container { width: min(100% - 28px, 1180px); }
+@media (max-width: 768px) {
 
-  .menu-toggle { display: block; z-index: 1002; }
+  /* ... outras regras que já definimos (paddings, etc.) ... */
 
-  .menu {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    background: rgba(8,8,8,.98);
-    transform: translateX(100%);
-    transition: transform .35s ease;
+  /* AJUSTE ESPECÍFICO DO TÍTULO "MAKE IT WILD" */
+  main > section:first-of-type h1 {
+    /* 
+       clamp(mínimo, ideal/fluido, máximo)
+       - Mínimo: 2.2rem (garante que não fica pequeno demais)
+       - Ideal: 12vw (escala com 12% da largura do ecrã do telemóvel)
+       - Máximo: 4rem (limita o tamanho para não exagerar)
+    */
+    font-size: clamp(2.2rem, 12vw, 4rem) !important;
+    
+    /* Reduz o espaço entre linhas para manter o aspeto "editorial" em bloco */
+    line-height: 1.05 !important;
+    
+    /* Garante que o texto se mantém em maiúsculas (se não estiver no HTML) */
+    text-transform: uppercase !important;
+    
+    /* Remove margens antigas que possam estar a empurrar o texto */
+    margin-top: 0 !important;
+    margin-bottom: 1.5rem !important;
+    margin-left: 0 !important;
+    
+    /* Evita quebras de palavra forçadas */
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+}
   }
 
   .menu.open { transform: translateX(0); }
