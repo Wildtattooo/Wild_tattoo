@@ -666,3 +666,10 @@ main > section:first-of-type div a:last-child:hover {
   opacity: 0.85 !important;
   line-height: 1.6 !important;
 }
+/* ==========================================================================
+   LINHA AMARELA SEPARADORA NA BASE DA FOTO DO HERO
+   ========================================================================== */
+main > section:first-of-type {
+  border-bottom: 2px solid #ffee00 !important;
+  box-shadow: 0 4px 15px rgba(255, 238, 0, 0.15) !important;
+}
