@@ -612,3 +612,42 @@ main > section:first-of-type div a:last-child:hover {
     gap: 0.5rem;
   }
 }
+/* ==========================================================================
+   ESTILO DO MANIFESTO "WE DON'T FOLLOW THE LINE" (CENTRADO E GRANDE)
+   ========================================================================== */
+#tattoo.manifesto-section {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+#tattoo.manifesto-section p:first-child {
+  text-align: center !important;
+  margin-bottom: 1rem !important;
+}
+
+#tattoo.manifesto-section h2 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.05 !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  margin-bottom: 1.5rem !important;
+}
+
+#tattoo.manifesto-section h2 span {
+  color: #ffee00 !important; /* Destaque a amarelo na palavra FOLLOW */
+}
+
+#tattoo.manifesto-section .manifesto-desc {
+  max-width: 650px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  font-size: 1.05rem !important;
+  opacity: 0.85 !important;
+  line-height: 1.6 !important;
+}
