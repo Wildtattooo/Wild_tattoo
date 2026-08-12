@@ -1012,3 +1012,59 @@ footer {
     min-width: 85% !important;
   }
 }
+/* ========================================================
+   AJUSTES MOBILE (MÁXIMO 768px DE LARGURA DE ECRÃ)
+   ======================================================== */
+@media (max-width: 768px) {
+
+  /* 1. Prevenir scroll horizontal indesejado no telemóvel */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* 2. Menu de Navegação - Esconde a lista horizontal no telemóvel */
+  header nav ul {
+    display: none; /* Oculta os links do header para não amontoar */
+  }
+
+  /* 3. Títulos Principais - Ajusta o tamanho da fonte */
+  h1 {
+    font-size: clamp(2.2rem, 9vw, 3.5rem) !important;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 7vw, 2.5rem) !important;
+  }
+
+  /* 4. Marquee / Texto em Movimento - Impede quebra da página */
+  section div span {
+    font-size: 0.9rem;
+  }
+
+  /* 5. Grelha de Serviços e Trabalhos (Work) em 1 Coluna */
+  section article {
+    width: 100% !important;
+    margin-bottom: 1.5rem;
+  }
+
+  /* 6. Botões de Ação (Pedir Orçamento, WhatsApp, Instagram) */
+  div a[href*="contacto"], 
+  div a[href*="wa.me"], 
+  div a[href*="instagram"] {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  /* 7. FAQs (detalhes recolhíveis) com área de toque confortável */
+  details summary {
+    padding: 12px 0;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
