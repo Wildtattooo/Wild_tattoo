@@ -716,3 +716,49 @@ main > section:first-of-type {
     transform: translateX(-50%);
   }
 }
+/* ==========================================================================
+   SECÇÃO MINDSET — TEXTO GRANDE, IMPACTANTE E CENTRADO
+   ========================================================================== */
+.mindset-section {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 6rem 6vw !important;
+  margin: 0 auto !important;
+  max-width: 1100px !important;
+}
+
+.mindset-tag {
+  font-size: 0.85rem !important;
+  letter-spacing: 3px !important;
+  opacity: 0.5 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.mindset-section h2 {
+  font-size: clamp(2rem, 5vw, 3.8rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.5px !important;
+  text-align: center !important;
+  color: #ffffff !important;
+  margin-bottom: 1.8rem !important;
+}
+
+.mindset-sub {
+  font-size: clamp(1rem, 2vw, 1.25rem) !important;
+  max-width: 750px !important;
+  margin: 0 auto !important;
+  opacity: 0.85 !important;
+  line-height: 1.6 !important;
+  text-align: center !important;
+}
+
+.mindset-sub span {
+  color: #ffee00 !important;
+  font-weight: 800 !important;
+}
