@@ -673,3 +673,46 @@ main > section:first-of-type {
   border-bottom: 2px solid #ffee00 !important;
   box-shadow: 0 4px 15px rgba(255, 238, 0, 0.15) !important;
 }
+/* ==========================================================================
+   FAIXA DESLIZANTE (MARQUEE) — AMARELO VIBRANTE E MOVIMENTO INFINITO
+   ========================================================================== */
+.marquee-wrapper {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow: hidden !important;
+  background-color: #ffee00 !important; /* Amarelo da tua paleta */
+  color: #0d0d0d !important;             /* Texto em Preto */
+  padding: 14px 0 !important;
+  margin: 3rem 0 !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.marquee-track {
+  display: flex !important;
+  width: max-content !important;
+  white-space: nowrap !important;
+  animation: marquee-move 18s linear infinite !important;
+}
+
+.marquee-track span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  color: #0d0d0d !important;
+  padding-right: 1rem !important;
+}
+
+/* Animação de Deslocamento Contínuo */
+@keyframes marquee-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
