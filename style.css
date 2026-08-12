@@ -128,8 +128,12 @@ main > section:first-of-type {
   align-items: flex-start;
   padding-left: 10vw;
   padding-right: 6vw;
+  position: relative;
+  background-image: linear-gradient(to right, rgba(13, 13, 13, 0.9) 25%, rgba(13, 13, 13, 0.3) 100%), url('hero-tattoo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 main > section:first-of-type p:first-child {
   font-size: 0.85rem;
   letter-spacing: 3px;
