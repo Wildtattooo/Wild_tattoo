@@ -927,3 +927,10 @@ main > section:first-of-type {
   background: var(--yellow);
   margin-bottom: 30px;
 }
+/* GALERIA — PC 3x3 / TELEMÓVEL 1x1 */
+
+@media (max-width: 800px) {
+    section:nth-of-type(4) div:nth-child(2) {
+        grid-template-columns: 1fr;
+    }
+}
