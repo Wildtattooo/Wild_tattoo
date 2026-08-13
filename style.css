@@ -960,32 +960,33 @@ main > section:first-of-type {
   border-radius: 2px;
 }
 /* ==========================================================================
-   BOTÕES "PEDIR ORÇAMENTO" CHAMATIVOS (NOS CARTÕES DE SERVIÇOS)
+   BOTÕES "PEDIR ORÇAMENTO" SÓLIDOS E CHAMATIVOS (SERVIÇOS)
    ========================================================================== */
 
-/* Transforma o link num botão amarelo preenchido e destacado */
-article a {
-  display: inline-block !important;
-  width: 100% !important;               /* Ocupa a largura total do cartão */
+main section:nth-of-type(3) article a,
+article a[href="#contacto"] {
+  display: block !important;
+  width: 100% !important;
   text-align: center !important;
-  padding: 14px 20px !important;
-  background-color: #ffee00 !important; /* Amarelo vibrante */
-  color: #0d0d0d !important;            /* Texto a preto bem legível */
-  font-size: 0.85rem !important;
+  padding: 16px 20px !important;
+  background-color: #ffee00 !important; /* Fundo Amarelo Vibrante */
+  color: #0d0d0d !important;            /* Texto Preto bem visível */
+  font-size: 0.9rem !important;
   font-weight: 900 !important;
   letter-spacing: 1.5px !important;
   text-transform: uppercase !important;
   border-radius: 4px !important;
   text-decoration: none !important;
-  box-shadow: 0 4px 15px rgba(255, 238, 0, 0.2) !important;
+  box-shadow: 0 4px 15px rgba(255, 238, 0, 0.3) !important;
   transition: all 0.3s ease !important;
-  margin-top: auto !important;          /* Encosta ao fundo do cartão */
+  margin-top: 1.5rem !important;
 }
 
-/* Efeito Hover (ao passar o rato ou tocar) */
-article a:hover {
-  background-color: #ffffff !important; /* Muda para branco brilhante */
+/* Efeito ao passar o rato (Hover) */
+main section:nth-of-type(3) article a:hover,
+article a[href="#contacto"]:hover {
+  background-color: #ffffff !important; /* Muda para Branco ao passar o rato */
   color: #0d0d0d !important;
   transform: translateY(-3px) !important;
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4) !important;
 }
