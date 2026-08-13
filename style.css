@@ -959,3 +959,33 @@ main > section:first-of-type {
   margin-bottom: 25px;
   border-radius: 2px;
 }
+/* ==========================================================================
+   BOTÕES "PEDIR ORÇAMENTO" CHAMATIVOS (NOS CARTÕES DE SERVIÇOS)
+   ========================================================================== */
+
+/* Transforma o link num botão amarelo preenchido e destacado */
+article a {
+  display: inline-block !important;
+  width: 100% !important;               /* Ocupa a largura total do cartão */
+  text-align: center !important;
+  padding: 14px 20px !important;
+  background-color: #ffee00 !important; /* Amarelo vibrante */
+  color: #0d0d0d !important;            /* Texto a preto bem legível */
+  font-size: 0.85rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 15px rgba(255, 238, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+  margin-top: auto !important;          /* Encosta ao fundo do cartão */
+}
+
+/* Efeito Hover (ao passar o rato ou tocar) */
+article a:hover {
+  background-color: #ffffff !important; /* Muda para branco brilhante */
+  color: #0d0d0d !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3) !important;
+}
