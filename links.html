@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>WILD. — Quick Links</title>
+  <meta name="description" content="Wild Studio — Tattoo, Design & Web">
+  <style>
+    /* RESET & VARIÁVEIS */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+      --bg: #0d0d0d;
+      --card-bg: #141414;
+      --yellow: #ffee00;
+      --text: #ffffff;
+      --subtext: #888888;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem 1.2rem 1.5rem 1.2rem;
+      min-height: 100vh;
+      min-height: -webkit-fill-available; /* Ajuste para o Safari do iPhone */
+    }
+
+    /* CARD PRINCIPAL MOBILE */
+    .mobile-wrapper {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* HEADER & AVATAR */
+    .avatar-wrapper {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .avatar {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--yellow);
+      box-shadow: 0 0 25px rgba(255, 238, 0, 0.2);
+    }
+
+    /* Ponto de estado Ativo no Avatar */
+    .status-badge {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      width: 14px;
+      height: 14px;
+      background-color: #00ff66;
+      border: 2px solid var(--bg);
+      border-radius: 50%;
+    }
+
+    .brand-title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .brand-title span {
+      color: var(--yellow);
+    }
+
+    .brand-tagline {
+      font-size: 0.85rem;
+      color: var(--subtext);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    /* BLOCO README TERMINAL */
+    .readme-card {
+      width: 100%;
+      background: #111111;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-left: 3px solid var(--yellow);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1.8rem;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      color: #cccccc;
+    }
+
+    .readme-card header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--yellow);
+      letter-spacing: 1.5px;
+    }
+
+    .readme-card header span:last-child {
+      color: var(--subtext);
+      font-weight: 400;
+    }
+
+    /* LISTA DE BOTÕES (MOBILE LINKS) */
+    .links-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .btn-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 16px 20px;
+      background-color: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.88rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+    }
+
+    /* Feedback tátil ao tocar no telemóvel */
+    .btn-link:active {
+      transform: scale(0.98);
+      background-color: #1c1c1c;
+    }
+
+    /* Botão Principal (WhatsApp) */
+    .btn-link.primary {
+      background-color: var(--yellow);
+      color: #0d0d0d;
+      border-color: var(--yellow);
+      box-shadow: 0 6px 20px rgba(255, 238, 0, 0.2);
+    }
+
+    .btn-link.primary:active {
+      background-color: #e6d600;
+    }
+
+    .btn-icon {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    /* RODAPÉ MOBILE */
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--subtext);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    footer a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="mobile-wrapper">
+    
+    <!-- Topo: Foto / Logo com badge verde de "Online" -->
+    <div class="avatar-wrapper">
+      <img src="logo.jpg" alt="WILD." class="avatar">
+      <div class="status-badge" title="Disponível para orçamentos"></div>
+    </div>
+
+    <h1 class="brand-title">WILD<span>.</span></h1>
+    <p class="brand-tagline">Tattoo · Design · Web Studio</p>
+
+    <!-- Bloco README estilo nota técnica -->
+    <div class="readme-card">
+      <header>
+        <span>⚡ README.txt</span>
+        <span>v2.0</span>
+      </header>
+
+      Arte autoral na pele, identidades visuais marcantes e experiências digitais únicas.
+    </div>
+
+    <!-- Lista de Links otimizada para o polegar -->
+    <div class="links-group">
+      
+      <!-- WhatsApp (Ação Principal) -->
+      <a href="https://wa.me/351912886085" target="_blank" rel="noopener" class="btn-link primary">
+        <span>💬 PEDIR ORÇAMENTO</span>
+        <span class="btn-icon">→</span>
+      </a>
+
+      <!-- Portfólio de Tatuagens -->
+      <a href="index.html#work" class="btn-link">
+        <span>🖤 PORTFÓLIO TATTOO</span>
+        <span class="btn-icon">↗</span>
+      </a>
+
+      <!-- Galeria Design & Web -->
+      <a href="index.html#design" class="btn-link">
+        <span>⚡ DESIGN & WEBSITES</span>
+        <span class="btn-icon">↗</span>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/wild.tattooo" target="_blank" rel="noopener" class="btn-link">
+        <span>📸 INSTAGRAM</span>
+        <span class="btn-icon">↗</span>
+      </a>
+
+      <!-- Site Completo -->
+      <a href="index.html" class="btn-link">
+        <span>🌐 SITE OFICIAL</span>
+        <span class="btn-icon">↗</span>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2026 <a href="index.html">WILD.</a> — Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
