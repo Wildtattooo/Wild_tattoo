@@ -919,30 +919,3 @@ main > section:first-of-type {
   color: #0d0d0d !important;
   transform: translateY(-3px) !important;
 }
-.services-title {
-    position: relative;
-    padding-top: 35px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.4s ease, transform 0.5s ease;
-}
-
-.services-title::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 10px;
-    background: #FFD400;
-    transition: width 0.55s cubic-bezier(0.77, 0, 0.18, 1);
-}
-
-.services-title.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.services-title.is-visible::before {
-    width: 100%;
-}
