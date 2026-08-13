@@ -378,7 +378,32 @@ article a {
   object-fit: cover;
   border-radius: 4px;
 }
+/* 1. Prepara o quadrado para conter o zoom sem sair fora */
+#work article {
+  display: grid;
+  overflow: hidden; /* Garante que o zoom não sai fora da caixa */
+  border-radius: 4px;
+}
 
+/* 2. Estilo base da imagem + Transição suave */
+#work article img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+
+  /* --- EFEITO DE ANIMAÇÃO --- */
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
+  filter: grayscale(25%) brightness(90%); /* Começa ligeiramente desaturada e elegante */
+}
+
+/* 3. Animação quando o rato passa por cima */
+#work article:hover img {
+  transform: scale(1.08); /* Zoom de 8% */
+  filter: grayscale(0%) brightness(110%); /* Fica a cores vivas e com brilho */
+  cursor: pointer;
+}
 /* 2. REGRA MOBILE (Telemóvel - Ecrãs até 768px): 1 Imagem por linha */
 @media (max-width: 768px) {
   #work > div > div:nth-child(2) > div {
