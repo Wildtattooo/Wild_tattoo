@@ -79,3 +79,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+const servicesTitle = document.querySelector('.services-title');
+
+if (servicesTitle) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                servicesTitle.classList.add('is-visible');
+                observer.unobserve(servicesTitle);
+            }
+        });
+    }, {
+        threshold: 0.25
+    });
+
+    observer.observe(servicesTitle);
+}
