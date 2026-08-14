@@ -6,7 +6,7 @@
   <title>WILD. — Tattoo, Design & Web Studio</title>
   <meta name="description" content="Tatuamos ideias. Criamos identidades. Construímos experiências digitais. Arte que não passa desapercebida.">
 
-  <!-- Favicon / Ícone para a Google e navegadores -->
+  <!-- Favicon / Ícones -->
   <link rel="icon" type="image/jpeg" href="logo.jpg">
   <link rel="shortcut icon" type="image/jpeg" href="logo.jpg">
   <link rel="apple-touch-icon" href="logo.jpg">
@@ -46,14 +46,14 @@
         <span>WILD<span>.</span></span>
       </a>
 
-      <!-- Botão Hambúrguer -->
+      <!-- Botão Hambúrguer Mobile -->
       <button class="menu-toggle" aria-label="Abrir menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <!-- Botões de Navegação -->
+      <!-- Links de Navegação -->
       <ul class="nav-links">
         <li><a href="#inicio">Início</a></li>
         <li><a href="#tattoo">Tattoo</a></li>
@@ -328,19 +328,19 @@
     const navLinks = document.querySelector('.nav-links');
     const links = document.querySelectorAll('.nav-links a');
 
-    // Abre e fecha ao clicar no botão hambúrguer
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
-    });
-
-    // Fecha o menu automaticamente quando clicas num link
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navLinks.classList.remove('active');
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
       });
-    });
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+        });
+      });
+    }
   </script>
 
 </body>
