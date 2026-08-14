@@ -1,70 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <head>
-  <meta charset="UTF-8">
-  <title>WILD. — Tattoo, Design & Web Studio</title>
-
-  <!-- Favicon / Ícone para a Google e navegadores -->
-  <link rel="icon" type="image/png" sizes="48x48" href="./logo.jpg">
-  <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
-
-  <!-- Resto do teu head (meta tags, css, etc.) -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WILD. — Tattoo, Design & Web Studio</title>
   <meta name="description" content="Tatuamos ideias. Criamos identidades. Construímos experiências digitais. Arte que não passa desapercebida.">
+
+  <!-- Favicon / Ícone para a Google e navegadores -->
   <link rel="icon" type="image/jpeg" href="logo.jpg">
   <link rel="shortcut icon" type="image/jpeg" href="logo.jpg">
   <link rel="apple-touch-icon" href="logo.jpg">
-  <!-- ----------------- -->
-  <link rel="stylesheet" href="style.css">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TattooParlor",
-  "name": "WILD TATTOO STUDIO",
-  "image": "https://www.wildtattoo.pt/hero-tattoo.png",
-  "@id": "https://www.wildtattoo.pt",
-  "url": "https://www.wildtattoo.pt",
-  "telephone": "+351912886085",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Freixo de Cima",
-    "addressLocality": "Amarante",
-    "addressCountry": "PT"
-  },
-  "sameAs": [
-    "https://www.instagram.com/wild.tattooo"
-  ]
-}
-</script>
 
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TattooParlor",
+    "name": "WILD TATTOO STUDIO",
+    "image": "https://www.wildtattoo.pt/hero-tattoo.png",
+    "@id": "https://www.wildtattoo.pt",
+    "url": "https://www.wildtattoo.pt",
+    "telephone": "+351912886085",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Freixo de Cima",
+      "addressLocality": "Amarante",
+      "addressCountry": "PT"
+    },
+    "sameAs": [
+      "https://www.instagram.com/wild.tattooo"
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <!-- Overlay / Cortina Inicial -->
   <div></div>
-<header>
+
+  <header>
     <nav>
       <a aria-label="WILD início" href="#inicio" class="logo">
         <img alt="WILD Logo" src="logo.jpg">
         <span>WILD<span>.</span></span>
       </a>
 
-      <!-- Botão Hambúrguer adicionado -->
+      <!-- Botão Hambúrguer -->
       <button class="menu-toggle" aria-label="Abrir menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
+      <!-- Botões de Navegação -->
       <ul class="nav-links">
         <li><a href="#inicio">Início</a></li>
         <li><a href="#tattoo">Tattoo</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#design">Design &amp; Web</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#contacto" class="btn-menu-destaque">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -73,22 +68,18 @@
 
     <!-- SECÇÃO 01: HERO / INTRODUÇÃO -->
     <section id="inicio">
-     
       <h1>MAKE IT<br><span>WILD.</span></h1>
-
       <p>
         Tatuamos ideias. Criamos identidades. Construímos experiências digitais.
         <span>Arte que não passa despercebida.</span>
       </p>
-
       <div>
         <a href="#work">VER TRABALHOS ↗</a>
         <a href="#contacto">PEDIR ORÇAMENTO</a>
       </div>
-    
     </section>
 
-   <!-- SECÇÃO 02: MANIFESTO / CONCEITO -->
+    <!-- SECÇÃO 02: MANIFESTO / CONCEITO -->
     <section id="tattoo" class="manifesto-section">
       <h2>WE DON'T<br><span>FOLLOW</span><br>THE LINE.</h2>
       <p class="manifesto-desc">
@@ -97,10 +88,8 @@
         com identidade própria e linguagem visual marcante.
       </p>
     </section>
-        </div>
-    </section>
 
-   <!-- FAIXA DESLIZANTE (MARQUEE) -->
+    <!-- FAIXA DESLIZANTE (MARQUEE) -->
     <div class="marquee-wrapper">
       <div class="marquee-track">
         <span>TATTOO ● BRANDING ● WEB DESIGN ● EXCLUSIVITY ● WILD MINDSET ● TATTOO ● BRANDING ● WEB DESIGN ● EXCLUSIVITY ● WILD MINDSET ● </span>
@@ -113,7 +102,7 @@
       <div>
         <div>
           <div>
-<h2>O QUE<br><span>FAZEMOS.</span></h2>
+            <h2>O QUE<br><span>FAZEMOS.</span></h2>
           </div>
           <p>Três áreas. Uma só linguagem visual.</p>
         </div>
@@ -174,8 +163,8 @@
     <section id="work">
       <div>
         <div>
-         <div class="work-title-line"></div>
-<h2>FEITO<br><span>PELA WILD.</span></h2>
+          <div class="work-title-line"></div>
+          <h2>FEITO<br><span>PELA WILD.</span></h2>
         </div>
 
         <div>
@@ -206,7 +195,7 @@
       </div>
     </section>
 
-   <!-- SECÇÃO 05: MANIFESTO MINDSET -->
+    <!-- SECÇÃO 05: MANIFESTO MINDSET -->
     <section class="mindset-section">
       <h2>“A TUA IDEIA NÃO PRECISA DE PARECER COM TODAS AS OUTRAS.”</h2>
       <p class="mindset-sub">
@@ -214,13 +203,12 @@
       </p>
     </section>
     
-  <!-- SECÇÃO 06: PERGUNTAS FREQUENTES (FAQ) -->
+    <!-- SECÇÃO 06: PERGUNTAS FREQUENTES (FAQ) -->
     <section class="faq-section">
       <p class="faq-tag">FAQ</p>
       <h2>PERGUNTAS<br><span>FREQUENTES.</span></h2>
 
       <div class="faq-container">
-        
         <!-- FAQ 01 -->
         <details class="faq-card">
           <summary class="faq-header">
@@ -298,7 +286,7 @@
           </div>
         </details>
 
-        <!-- FAQ 08 (Nova pergunta de Design) -->
+        <!-- FAQ 08 -->
         <details class="faq-card">
           <summary class="faq-header">
             <span>O que está incluído no pacote de Design e Gestão de Redes Sociais?</span>
@@ -308,10 +296,10 @@
             <p>Criamos toda a identidade gráfica (posters, banners, flyers e templates para feed/stories), além de elaborarmos o planeamento de conteúdos e artes visuais prontas a publicar para destacar o teu negócio nas redes sociais.</p>
           </div>
         </details>
-
       </div>
     </section>
-   <!-- SECÇÃO 07: CONTACTO / CALL TO ACTION -->
+
+    <!-- SECÇÃO 07: CONTACTO / CALL TO ACTION -->
     <section id="contacto" class="cta-section">
       <h2>LET'S MAKE<br><span>SOMETHING WILD.</span></h2>
       <p class="cta-desc">
@@ -324,7 +312,8 @@
     </section>
 
   </main>
-<!-- RODAPÉ -->
+
+  <!-- RODAPÉ -->
   <footer>
     <div>
       <strong>WILD<span>.</span></strong>
