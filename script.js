@@ -1,37 +1,48 @@
+// ==========================================
+// MENU HAMBÚRGUER (MOBILE)
+// ==========================================
 const menuToggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".menu");
+const menu = document.querySelector(".nav-links");
 
 if (menuToggle && menu) {
   menuToggle.addEventListener("click", () => {
-    const open = menu.classList.toggle("open");
-    document.body.classList.toggle("menu-open", open);
-    menuToggle.setAttribute("aria-expanded", open);
+    const isActive = menu.classList.toggle("active");
+    menuToggle.classList.toggle("active", isActive);
+    document.body.classList.toggle("menu-open", isActive);
+    menuToggle.setAttribute("aria-expanded", isActive);
   });
 
-  document.querySelectorAll(".menu a").forEach(link => {
+  document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
-      menu.classList.remove("open");
+      menu.classList.remove("active");
+      menuToggle.classList.remove("active");
       document.body.classList.remove("menu-open");
       menuToggle.setAttribute("aria-expanded", "false");
     });
   });
 }
 
-// Reveal animations
+// ==========================================
+// REVEAL ANIMATIONS
+// ==========================================
 const revealItems = document.querySelectorAll(".reveal");
 
-const revealObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
+if (revealItems.length > 0) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
 
-revealItems.forEach(item => revealObserver.observe(item));
+  revealItems.forEach(item => revealObserver.observe(item));
+}
 
-// Portfolio filters
+// ==========================================
+// PORTFOLIO FILTERS
+// ==========================================
 const filters = document.querySelectorAll(".filter");
 const projects = document.querySelectorAll(".project");
 
@@ -49,7 +60,9 @@ filters.forEach(filter => {
   });
 });
 
-// Small parallax effect on desktop
+// ==========================================
+// PARALLAX EFFECT (DESKTOP)
+// ==========================================
 const hero = document.querySelector(".hero");
 const heroGrid = document.querySelector(".hero-grid");
 
@@ -60,6 +73,9 @@ window.addEventListener("scroll", () => {
   }
 }, { passive: true });
 
+// ==========================================
+// PORTFOLIO GRID SLIDER
+// ==========================================
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.getElementById('portfolioGrid');
   const prevBtn = document.getElementById('prevBtn');
@@ -67,13 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (grid && prevBtn && nextBtn) {
     nextBtn.addEventListener('click', () => {
-      // Desliza para a direita a largura de 1 foto + espaço
       const scrollAmount = grid.clientWidth / 3 + 15;
       grid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     });
 
     prevBtn.addEventListener('click', () => {
-      // Desliza para a esquerda
       const scrollAmount = grid.clientWidth / 3 + 15;
       grid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     });
