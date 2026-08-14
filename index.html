@@ -324,8 +324,7 @@
     </section>
 
   </main>
-
-  <!-- RODAPÉ -->
+<!-- RODAPÉ -->
   <footer>
     <div>
       <strong>WILD<span>.</span></strong>
@@ -333,6 +332,27 @@
       <span>© 2026</span>
     </div>
   </footer>
+
+  <!-- SCRIPT PARA ABRIR/FECHAR O MENU HAMBÚRGUER -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links a');
+
+    // Abre e fecha ao clicar no botão hambúrguer
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Fecha o menu automaticamente quando clicas num link
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
