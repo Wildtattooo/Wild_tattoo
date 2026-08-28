@@ -37,6 +37,7 @@
     .slot { padding: 10px; background: #222; border: 1px solid var(--border); border-radius: 6px; text-align: center; font-size: 0.9rem; cursor: pointer; transition: 0.2s; }
     .slot:hover { border-color: var(--accent); }
     .slot.selected { background: var(--accent); color: #000; font-weight: bold; }
+    .no-slots { grid-column: span 2; text-align: center; color: var(--text-dim); font-size: 0.85rem; padding: 10px; }
 
     /* Formulário */
     .input-group { margin-top: 14px; }
@@ -67,10 +68,7 @@
 
   <div class="section-title">Horários Disponíveis</div>
   <div class="slots" id="slotContainer">
-    <div class="slot" data-time="10:00">10:00</div>
-    <div class="slot" data-time="14:00">14:00</div>
-    <div class="slot" data-time="16:30">16:30</div>
-    <div class="slot" data-time="18:30">18:30</div>
+    <div class="no-slots">Clica primeiro num dia no calendário</div>
   </div>
 
   <form id="bookingForm">
@@ -95,14 +93,44 @@
 <script>
   // COLA AQUI O TEU URL DO APPS SCRIPT E NÚMERO
   const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxYwPBfedk6a3VSaR6O_CDQ6Ga0qH10XMa2qds_4v9IT-b7Z1mQSpA7999Dp5MgW_DC/exec"; 
-  const MEU_WHATSAPP = "351912886085"; // O teu contacto de WhatsApp
+  const MEU_WHATSAPP = "351912886085"; // Teu WhatsApp com indicativo (ex: 351912345678)
   const VALOR_SINAL = "30€";
+
+  // Horários configurados
+  const HORARIOS_SEMANA = ["19:00", "20:00"];
+  const HORARIOS_FIM_SEMANA = ["10:00", "13:00", "15:00", "17:00"];
 
   let dataAtual = new Date();
   let selectedDate = null;
   let selectedTime = null;
 
   const monthNames = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+
+  function updateSlots(dateStr) {
+    const slotContainer = document.getElementById('slotContainer');
+    slotContainer.innerHTML = '';
+    selectedTime = null;
+
+    const parts = dateStr.split('-');
+    const pickedDate = new Date(parts[0], parts[1] - 1, parts[2]);
+    const dayOfWeek = pickedDate.getDay(); // 0 = Domingo, 6 = Sábado
+
+    const isWeekend = (dayOfWeek === 0 || dayOfWeek === 6);
+    const slotsToUse = isWeekend ? HORARIOS_FIM_SEMANA : HORARIOS_SEMANA;
+
+    slotsToUse.forEach(time => {
+      const slotEl = document.createElement('div');
+      slotEl.className = 'slot';
+      slotEl.dataset.time = time;
+      slotEl.innerText = time;
+      slotEl.onclick = () => {
+        document.querySelectorAll('.slot').forEach(s => s.classList.remove('selected'));
+        slotEl.classList.add('selected');
+        selectedTime = time;
+      };
+      slotContainer.appendChild(slotEl);
+    });
+  }
 
   function renderCalendar() {
     const year = dataAtual.getFullYear();
@@ -128,7 +156,7 @@
       dayEl.innerText = d;
       
       const checkDate = new Date(year, month, d);
-      if (checkDate < today || checkDate.getDay() === 0) { // Bloqueia dias passados e Domingos
+      if (checkDate < today) {
         dayEl.classList.add('disabled');
       } else {
         const formattedDate = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
@@ -138,6 +166,7 @@
           document.querySelectorAll('.day').forEach(el => el.classList.remove('selected'));
           dayEl.classList.add('selected');
           selectedDate = formattedDate;
+          updateSlots(formattedDate);
         };
       }
       daysContainer.appendChild(dayEl);
@@ -147,18 +176,10 @@
   document.getElementById('prevMonth').onclick = () => { dataAtual.setMonth(dataAtual.getMonth() - 1); renderCalendar(); };
   document.getElementById('nextMonth').onclick = () => { dataAtual.setMonth(dataAtual.getMonth() + 1); renderCalendar(); };
 
-  document.querySelectorAll('.slot').forEach(slot => {
-    slot.onclick = () => {
-      document.querySelectorAll('.slot').forEach(s => s.classList.remove('selected'));
-      slot.classList.add('selected');
-      selectedTime = slot.dataset.time;
-    };
-  });
-
   document.getElementById('bookingForm').onsubmit = async (e) => {
     e.preventDefault();
     if (!selectedDate) return alert("Por favor, seleciona um dia no calendário.");
-    if (!selectedTime) return alert("Por favor, seleciona um horário.");
+    if (!selectedTime) return alert("Por favor, seleciona um horário disponível.");
 
     const btn = document.getElementById('btnSubmit');
     btn.innerText = "A registar reserva...";
@@ -170,7 +191,7 @@
 
     const dados = { nome, telefone, ideia, data: selectedDate, hora: selectedTime };
 
-    // Regista na Folha e no Google Calendar
+    // Regista na folha e no Google Calendar
     try {
       await fetch(SCRIPT_URL, {
         method: "POST",
@@ -179,10 +200,10 @@
         body: JSON.stringify(dados)
       });
     } catch(err) {
-      console.error("Erro ao registar:", err);
+      console.error("Erro:", err);
     }
 
-    // Redirecionamento para o teu WhatsApp
+    // Redirecionamento para WhatsApp
     const partes = selectedDate.split('-');
     const dataPt = `${partes[2]}/${partes[1]}/${partes[0]}`;
     
@@ -191,7 +212,7 @@
       `⏰ *Hora:* ${selectedTime}%0A` +
       `👤 *Nome:* ${encodeURIComponent(nome)}%0A` +
       `💉 *Ideia:* ${encodeURIComponent(ideia)}%0A%0A` +
-      `Aguardo os dados para pagar o sinal (${VALOR_SINAL}) por MB WAY e confirmar a vaga.`;
+      `Aguardo os dados para enviar o sinal (${VALOR_SINAL}) por MB WAY e confirmar a vaga.`;
 
     window.location.href = `https://wa.me/${MEU_WHATSAPP}?text=${msg}`;
   };
