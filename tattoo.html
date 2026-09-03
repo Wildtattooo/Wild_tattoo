@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WILD. — Tattoo Studio</title>
-  <meta name="description" content="Tatuagens personalizadas, traços finos e projetos exclusivos autorais.">
+  <meta name="description" content="Tatuamos ideias. Criamos identidades. Arte autoral e linhas finas que não passam despercebidas.">
 
   <!-- Favicon / Ícones -->
   <link rel="icon" type="image/jpeg" href="logo.jpg">
@@ -36,9 +36,13 @@
 </head>
 <body>
 
+  <!-- Overlay / Cortina Inicial exigida pelo CSS (body > div:first-child) -->
+  <div></div>
+
   <header>
     <nav>
-      <a aria-label="WILD início" href="index.html" class="logo">
+      <!-- Mantido exatamente href="#inicio" para ativar a regra de 32px do logo no style.css -->
+      <a aria-label="WILD início" href="#inicio" class="logo">
         <img alt="WILD Logo" src="logo.jpg">
         <span>WILD<span>.</span></span>
       </a>
@@ -52,24 +56,25 @@
 
       <!-- Links de Navegação -->
       <ul class="nav-links">
-        <li><a href="index.html">← Início</a></li>
-        <li><a href="#estilo">Conceito</a></li>
-        <li><a href="#work">Trabalhos</a></li>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="#tattoo">Conceito</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="design-web.html">Design &amp; Web</a></li>
-        <li><a href="#contacto" class="btn-menu-destaque">Agendar Sessão</a></li>
+        <li><a href="#contacto" class="btn-menu-destaque">Agendar</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
 
-    <!-- SECÇÃO 01: HERO TATTOO -->
+    <!-- SECÇÃO 01: HERO (main > section:first-of-type) -->
     <section id="inicio">
+      <p>Studio Autoral</p>
       <h1>SKIN IS THE<br><span>CANVAS.</span></h1>
       <p>
         O teu corpo. A tua história. A nossa arte.
-        <span>Projetos autorais, linhas finas e contrastes marcantes.</span>
+        <span>Tatuagens personalizadas, linhas finas e contrastes marcantes.</span>
       </p>
       <div>
         <a href="#work">VER TRABALHOS ↗</a>
@@ -77,15 +82,16 @@
       </div>
     </section>
 
-    <!-- SECÇÃO 02: MANIFESTO -->
-    <section id="estilo" class="manifesto-section">
+    <!-- SECÇÃO 02: MANIFESTO (#tattoo.manifesto-section) -->
+    <section id="tattoo" class="manifesto-section">
+      <p>Manifesto</p>
       <h2>WE DON'T<br><span>FOLLOW</span><br>THE LINE.</h2>
       <p class="manifesto-desc">
-        Cada projeto na WILD é autoral e exclusivo. Pegamos na tua ideia e desenhamos uma peça à medida, com foco na precisão do traço e numa cicatrização impecável.
+        A WILD junta arte, precisão e personalização. Cada peça é desenhada à medida, transformando a tua ideia numa tatuagem com identidade própria e durabilidade técnica.
       </p>
     </section>
 
-    <!-- MARQUEE -->
+    <!-- FAIXA DESLIZANTE (MARQUEE) -->
     <div class="marquee-wrapper">
       <div class="marquee-track">
         <span>TATTOO ● FINE LINE ● EXCLUSIVITY ● BLACKWORK ● AUTORAL ● TATTOO ● FINE LINE ● EXCLUSIVITY ● BLACKWORK ● AUTORAL ● </span>
@@ -93,52 +99,55 @@
       </div>
     </div>
 
-    <!-- SECÇÃO 03: SERVIÇOS DE TATTOO -->
+    <!-- SECÇÃO 03: SERVIÇOS (section:nth-of-type(3)) -->
     <section>
       <div>
         <div>
           <div>
             <h2>ARTE NA<br><span>PELE.</span></h2>
           </div>
-          <p>O que podes esperar de cada sessão no studio.</p>
+          <p>Três pilares. Uma só linguagem visual.</p>
         </div>
 
         <div>
+          <!-- Cartão 01 -->
           <article>
             <span>01</span>
             <div>✦</div>
-            <h3>PROJETOS AUTORAIS</h3>
-            <p>Peças criadas exclusivamente para ti a partir da tua referência.</p>
+            <h3>AUTORAL</h3>
+            <p>Peças desenhadas do zero pensadas exclusivamente para ti.</p>
             <ul>
-              <li>Design exclusivo desenhado do zero</li>
-              <li>Estudo anatómico para encaixe perfeito no corpo</li>
-              <li>Ajustes e refinamento pré-sessão</li>
+              <li>Desenhos únicos e personalizados</li>
+              <li>Estudo anatómico e proporções</li>
+              <li>Acompanhamento pré-sessão</li>
             </ul>
             <a href="#contacto">PEDIR ORÇAMENTO →</a>
           </article>
 
+          <!-- Cartão 02 -->
           <article>
             <span>02</span>
             <div>◒</div>
-            <h3>FINE LINE &amp; DETALHE</h3>
-            <p>Traços finos, precisos e detalhes que mantêm a definição.</p>
+            <h3>FINE LINE</h3>
+            <p>Traços finos, limpos e micro-detalhes de alta definição.</p>
             <ul>
-              <li>Linhas limpas e delicadas</li>
-              <li>Micro-realismo e botânica</li>
+              <li>Linhas limpas e botânica</li>
               <li>Caligrafia e lettering subtil</li>
+              <li>Cicatrização leve e delicada</li>
             </ul>
             <a href="#contacto">PEDIR ORÇAMENTO →</a>
           </article>
 
+          <!-- Cartão 03 -->
           <article>
             <span>03</span>
             <div>⌁</div>
-            <h3>FLASHES &amp; COBERTURAS</h3>
-            <p>Desenhos autorais prontos ou renovação de peças antigas.</p>
+            <h3>FLASH &amp; COVER</h3>
+            <p>Desenhos autorais disponíveis ou cobertura de trabalhos antigos.</p>
             <ul>
-              <li>Flash designs únicos e imediatos</li>
-              <li>Cover-ups e restauros com planeamento</li>
-              <li>Pigmentos de alta fixação e segurança</li>
+              <li>Flashes autorais exclusivos</li>
+              <li>Coberturas e restauros (Cover-up)</li>
+              <li>Materiais 100% esterilizados</li>
             </ul>
             <a href="#contacto">PEDIR ORÇAMENTO →</a>
           </article>
@@ -146,7 +155,7 @@
       </div>
     </section>
 
-    <!-- SECÇÃO 04: GALERIA DE FOTOS (WORK) -->
+    <!-- SECÇÃO 04: GALERIA (#work / section:nth-of-type(4)) -->
     <section id="work">
       <div>
         <div>
@@ -156,6 +165,7 @@
 
         <div>
           <div>
+            <!-- As 12 tatuagens em grelha 3 colunas desktop / 1 coluna mobile -->
             <article><img alt="Tatuagem 01" src="TATTOO01.jpeg"></article>
             <article><img alt="Tatuagem 02" src="TATTOO02.jpeg"></article>
             <article><img alt="Tatuagem 03" src="TATTOO03.jpeg"></article>
@@ -173,20 +183,22 @@
       </div>
     </section>
 
-    <!-- SECÇÃO 05: MANIFESTO MINDSET -->
+    <!-- SECÇÃO 05: MANIFESTO MINDSET (.mindset-section) -->
     <section class="mindset-section">
+      <p class="mindset-tag">Mindset</p>
       <h2>“A TUA IDEIA NÃO PRECISA DE PARECER COM TODAS AS OUTRAS.”</h2>
       <p class="mindset-sub">
-        Na pele ou na arte, criamos algo que tem personalidade. Menos genérico. <span>Mais WILD.</span>
+        Seja na pele ou na vida, criamos algo que tenha personalidade. Menos genérico. <span>Mais WILD.</span>
       </p>
     </section>
     
-    <!-- SECÇÃO 06: FAQ TATTOO -->
+    <!-- SECÇÃO 06: PERGUNTAS FREQUENTES (FAQ) -->
     <section id="faq" class="faq-section">
       <p class="faq-tag">FAQ</p>
       <h2>PERGUNTAS<br><span>FREQUENTES.</span></h2>
 
       <div class="faq-container">
+        <!-- FAQ 01 -->
         <details class="faq-card">
           <summary class="faq-header">
             <span>Como posso agendar uma sessão de tatuagem?</span>
@@ -197,6 +209,7 @@
           </div>
         </details>
 
+        <!-- FAQ 02 -->
         <details class="faq-card">
           <summary class="faq-header">
             <span>Qual é o valor mínimo de uma tatuagem?</span>
@@ -207,6 +220,7 @@
           </div>
         </details>
 
+        <!-- FAQ 03 -->
         <details class="faq-card">
           <summary class="faq-header">
             <span>Fazem projetos de tatuagem 100% exclusivos?</span>
@@ -217,6 +231,7 @@
           </div>
         </details>
 
+        <!-- FAQ 04 -->
         <details class="faq-card">
           <summary class="faq-header">
             <span>Quais são os cuidados a ter antes e depois de tatuar?</span>
@@ -227,6 +242,7 @@
           </div>
         </details>
 
+        <!-- FAQ 05 -->
         <details class="faq-card">
           <summary class="faq-header">
             <span>Quais são as modalidades de pagamento disponíveis?</span>
@@ -239,11 +255,11 @@
       </div>
     </section>
 
-    <!-- SECÇÃO 07: CONTACTO -->
+    <!-- SECÇÃO 07: CONTACTO / CALL TO ACTION (section:nth-of-type(7) / .cta-section) -->
     <section id="contacto" class="cta-section">
       <h2>LET'S MAKE<br><span>SOMETHING WILD.</span></h2>
       <p class="cta-desc">
-        Queres marcar uma tatuagem ou tirar dúvidas sobre o teu projeto? Fala connosco.
+        Queres marcar uma tatuagem ou tirar dúvidas sobre o teu projeto? Conta-nos a tua ideia.
       </p>
       <div class="cta-buttons">
         <a href="https://instagram.com/wild.tattooo" target="_blank" rel="noopener" class="btn-instagram">INSTAGRAM ↗</a>
@@ -262,7 +278,7 @@
     </div>
   </footer>
 
-  <!-- JS HAMBÚRGUER -->
+  <!-- SCRIPT DO MENU HAMBÚRGUER MOBILE -->
   <script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
