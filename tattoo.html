@@ -1,303 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WILD. — Tattoo Studio</title>
-  <meta name="description" content="Tatuamos ideias. Criamos identidades. Arte autoral e linhas finas que não passam despercebidas.">
-
-  <!-- Favicon / Ícones -->
+  <title>WILD Tattoo Studio — Tatuagens em Amarante</title>
+  <meta name="description" content="WILD Tattoo Studio em Amarante. Tatuagens personalizadas, fine line, lettering, blackwork, flash e cover-up. Pede orçamento por WhatsApp.">
+  <meta name="theme-color" content="#0b0b0b">
   <link rel="icon" type="image/jpeg" href="logo.jpg">
-  <link rel="shortcut icon" type="image/jpeg" href="logo.jpg">
-  <link rel="apple-touch-icon" href="logo.jpg">
-
-  <link rel="stylesheet" href="style.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TattooParlor",
-    "name": "WILD TATTOO STUDIO",
-    "image": "https://www.wildtattoo.pt/hero-tattoo.png",
-    "@id": "https://www.wildtattoo.pt",
-    "url": "https://www.wildtattoo.pt/tattoo.html",
-    "telephone": "+351912886085",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Freixo de Cima",
-      "addressLocality": "Amarante",
-      "addressCountry": "PT"
-    },
-    "sameAs": [
-      "https://www.instagram.com/wild.tattooo"
-    ]
-  }
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0b0b;--card:#141414;--card2:#1b1b1b;--text:#fff;--muted:#aaa;--line:#2b2b2b;--accent:#dfff00}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden}a{color:inherit}img{display:block;max-width:100%}
+    header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(11,11,11,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}nav{height:76px;max-width:1450px;margin:auto;padding:0 5vw;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 24px 'Space Grotesk'}.logo img{width:42px;height:42px;object-fit:cover;border-radius:50%;border:1px solid rgba(255,255,255,.15)}.logo span span,.accent{color:var(--accent)}.nav-links{list-style:none;display:flex;gap:26px;align-items:center;margin:0;padding:0}.nav-links a{text-decoration:none;font-size:13px;font-weight:700}.nav-links a:hover{color:var(--accent)}.nav-cta{padding:12px 18px;background:var(--accent);color:#0b0b0b!important;border-radius:999px}.menu-toggle{display:none;background:none;border:0;width:40px;height:40px}.menu-toggle span{display:block;height:2px;background:#fff;margin:6px 0}
+    .hero{min-height:100svh;position:relative;display:flex;align-items:end;padding:130px 5vw 70px;background:linear-gradient(90deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.58) 52%,rgba(0,0,0,.28) 100%),url('TATTOO01.jpeg') center/cover}.hero-inner{max-width:1100px}.tag{font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}h1,h2,h3{font-family:'Space Grotesk',sans-serif}.hero h1{font-size:clamp(64px,10vw,150px);line-height:.78;letter-spacing:-.07em;text-transform:uppercase;margin:22px 0}.hero p{max-width:650px;font-size:18px;line-height:1.7;color:#d0d0d0}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:999px;border:1px solid #fff;text-decoration:none;font-size:13px;font-weight:800;letter-spacing:.04em}.btn.primary{background:var(--accent);border-color:var(--accent);color:#090909}.btn:hover{transform:translateY(-2px)}
+    .ticker{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#101010}.ticker div{white-space:nowrap;padding:18px 0;font:700 12px 'Space Grotesk';letter-spacing:.16em;color:#d0d0d0}
+    section{padding:105px 5vw}.section-head{display:grid;grid-template-columns:1.1fr .8fr;gap:60px;align-items:end;margin-bottom:55px}.section-head small{color:var(--accent);font-weight:800;letter-spacing:.18em}.section-head h2{font-size:clamp(48px,7vw,95px);line-height:.88;letter-spacing:-.055em;text-transform:uppercase;margin:15px 0 0}.section-head p{color:var(--muted);font-size:17px;line-height:1.7}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service{background:var(--card);padding:34px;border:1px solid var(--line);min-height:310px}.service .num{color:var(--accent);font-weight:800}.service h3{font-size:28px;margin:55px 0 14px}.service p,.service li{color:var(--muted);line-height:1.65}.service ul{padding-left:18px}
+    .promo{background:var(--accent);color:#0b0b0b;padding:65px 5vw}.promo-wrap{max-width:1400px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}.promo .eyebrow{font-size:12px;font-weight:800;letter-spacing:.18em}.promo h2{font-size:clamp(54px,8vw,110px);line-height:.84;letter-spacing:-.06em;text-transform:uppercase;margin:14px 0}.promo p{font-size:18px;line-height:1.6;max-width:700px}.promo-card{background:#0b0b0b;color:#fff;padding:34px;border-radius:22px}.promo-card strong{font:700 58px 'Space Grotesk';color:var(--accent)}.promo-card p{font-size:14px;color:#bbb}.promo-card .btn{margin-top:14px;width:100%}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}.step{padding:32px 28px 32px 0;border-right:1px solid var(--line)}.step:not(:first-child){padding-left:28px}.step span{font:700 12px 'Space Grotesk';color:var(--accent)}.step h3{font-size:22px}.step p{color:var(--muted);line-height:1.6;font-size:14px}
+    .gallery-section{background:#111}.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.gallery figure{margin:0;aspect-ratio:1/1.18;overflow:hidden;background:#222}.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .5s ease}.gallery figure:hover img{transform:scale(1.04);filter:contrast(1.05)}
+    .care{display:grid;grid-template-columns:1fr 1fr;gap:16px}.care-card{background:var(--card);border:1px solid var(--line);padding:40px}.care-card h3{font-size:30px;margin-top:0}.care-card li{color:var(--muted);margin:12px 0;line-height:1.55}
+    .faq{max-width:1000px;margin:auto}.faq details{border-top:1px solid var(--line);padding:22px 0}.faq details:last-child{border-bottom:1px solid var(--line)}.faq summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;display:flex;justify-content:space-between;gap:20px}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:'+';color:var(--accent);font-size:25px}.faq details[open] summary::after{content:'−'}.faq p{color:var(--muted);line-height:1.65;max-width:850px}
+    .contact{background:#f1eee6;color:#0b0b0b;text-align:center}.contact h2{font-size:clamp(55px,9vw,120px);line-height:.84;letter-spacing:-.065em;text-transform:uppercase;margin:18px 0}.contact p{max-width:650px;margin:0 auto 30px;color:#555;line-height:1.7}.contact .btn{border-color:#0b0b0b}.contact .primary{background:#0b0b0b;color:#fff;border-color:#0b0b0b}.contact .whatsapp{background:var(--accent);border-color:var(--accent);color:#0b0b0b}
+    footer{padding:28px 5vw;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;color:#777;font-size:12px}footer strong{color:#fff;font:700 22px 'Space Grotesk'}footer strong span{color:var(--accent)}
+    @media(max-width:950px){.nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:#0b0b0b;padding:25px 5vw;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.nav-links.active{display:flex}.menu-toggle{display:block}.section-head,.promo-wrap{grid-template-columns:1fr}.services{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:repeat(2,1fr)}.care{grid-template-columns:1fr}.hero{background-position:62% center}.hero h1{font-size:clamp(60px,16vw,95px)}}
+    @media(max-width:600px){section{padding:78px 6vw}.hero{padding:120px 6vw 60px}.hero p{font-size:16px}.buttons{flex-direction:column}.btn{width:100%}.process{grid-template-columns:1fr}.step,.step:not(:first-child){padding:25px 0;border-right:0;border-bottom:1px solid var(--line)}.gallery{grid-template-columns:1fr 1fr}.promo{padding:55px 6vw}.promo-card strong{font-size:46px}footer{flex-direction:column;gap:12px;text-align:center}}
+  </style>
 </head>
 <body>
+<header>
+  <nav>
+    <a href="index.html" class="logo" aria-label="WILD início"><img src="logo.jpg" alt="WILD Tattoo"><span>WILD<span>.</span></span></a>
+    <button class="menu-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="#inicio">Início</a></li><li><a href="#estilos">Tatuagens</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#processo">Como funciona</a></li><li><a href="#faq">FAQ</a></li><li><a href="design-web.html">Design & Web</a></li><li><a href="#contacto" class="nav-cta">Agendar</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="inicio"><div class="hero-inner"><span class="tag">WILD Tattoo Studio · Amarante</span><h1>SKIN IS<br><span class="accent">THE CANVAS.</span></h1><p>Tatuagens personalizadas, traços delicados e projetos feitos para durar. Envia a tua ideia, tamanho e zona do corpo e recebe um orçamento.</p><div class="buttons"><a class="btn primary" href="https://wa.me/351912886085?text=Olá%20WILD!%20Gostava%20de%20pedir%20um%20orçamento%20para%20uma%20tatuagem." target="_blank" rel="noopener">PEDIR ORÇAMENTO →</a><a class="btn" href="#galeria">VER TRABALHOS</a></div></div></section>
+  <div class="ticker"><div>FINE LINE ✦ LETTERING ✦ BLACKWORK ✦ FLASH ✦ PERSONALIZADAS ✦ COVER-UP ✦ FINE LINE ✦ LETTERING ✦ BLACKWORK ✦ FLASH ✦ PERSONALIZADAS ✦ COVER-UP</div></div>
 
-  <!-- Overlay / Cortina Inicial exigida pelo CSS (body > div:first-child) -->
-  <div></div>
+  <section id="estilos"><div class="section-head"><div><small>01 · TATUAGENS</small><h2>ARTE FEITA<br>PARA A TUA PELE.</h2></div><p>Cada projeto é pensado de acordo com a tua ideia, tamanho, zona do corpo e estilo. Trabalhamos desde tatuagens pequenas e delicadas até composições mais marcantes.</p></div><div class="services"><article class="service"><span class="num">01</span><h3>FINE LINE</h3><p>Linhas finas e tatuagens minimalistas com visual delicado.</p><ul><li>Pequenas tatuagens</li><li>Botânica e símbolos</li><li>Detalhes minimalistas</li></ul></article><article class="service"><span class="num">02</span><h3>LETTERING & PERSONALIZADAS</h3><p>Frases, nomes, datas e desenhos criados ou adaptados para ti.</p><ul><li>Lettering</li><li>Projetos exclusivos</li><li>Referências adaptadas</li></ul></article><article class="service"><span class="num">03</span><h3>BLACKWORK, FLASH & COVER</h3><p>Projetos mais fortes, flashes disponíveis e avaliação de cover-up.</p><ul><li>Blackwork</li><li>Flash tattoos</li><li>Cover-up sob avaliação</li></ul></article></div></section>
 
-  <header>
-    <nav>
-      <!-- Mantido exatamente href="#inicio" para ativar a regra de 32px do logo no style.css -->
-      <a aria-label="WILD início" href="#inicio" class="logo">
-        <img alt="WILD Logo" src="logo.jpg">
-        <span>WILD<span>.</span></span>
-      </a>
+  <section class="promo"><div class="promo-wrap"><div><span class="eyebrow">PROMOÇÃO WILD</span><h2>2 TATTOOS<br>POR 70€</h2><p>Duas tatuagens simples, até 8 cm. Uma forma perfeita de fazeres aquela tattoo que tens guardada há meses — ou vires acompanhado.</p></div><div class="promo-card"><span class="tag">PACK TATTOO</span><strong>70€</strong><p>2 tatuagens simples · até 8 cm · mediante disponibilidade e avaliação do desenho.</p><a class="btn primary" href="https://wa.me/351912886085?text=Olá%20WILD!%20Quero%20saber%20mais%20sobre%20a%20promoção%20de%202%20tattoos%20por%2070€." target="_blank" rel="noopener">QUERO A PROMOÇÃO →</a></div></div></section>
 
-      <!-- Botão Hambúrguer Mobile -->
-      <button class="menu-toggle" aria-label="Abrir menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+  <section id="processo"><div class="section-head"><div><small>02 · COMO FUNCIONA</small><h2>DA IDEIA<br>À TATUAGEM.</h2></div><p>Para receberes um orçamento mais rápido, envia logo todas as informações principais.</p></div><div class="process"><div class="step"><span>PASSO 01</span><h3>Envia a ideia</h3><p>Manda referências ou explica o que gostavas de tatuar.</p></div><div class="step"><span>PASSO 02</span><h3>Tamanho e zona</h3><p>Indica o tamanho aproximado em centímetros e a zona do corpo.</p></div><div class="step"><span>PASSO 03</span><h3>Orçamento</h3><p>Avaliamos o projeto e enviamos valor e disponibilidade.</p></div><div class="step"><span>PASSO 04</span><h3>Marca a sessão</h3><p>Confirmamos a data e enviamos as indicações para o dia da tattoo.</p></div></div></section>
 
-      <!-- Links de Navegação -->
-      <ul class="nav-links">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="#tattoo">Conceito</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="design-web.html">Design &amp; Web</a></li>
-        <li><a href="#contacto" class="btn-menu-destaque">Agendar</a></li>
-      </ul>
-    </nav>
-  </header>
+  <section id="galeria" class="gallery-section"><div class="section-head"><div><small>03 · PORTFÓLIO</small><h2>FEITO<br>PELA WILD.</h2></div><p>Alguns dos trabalhos realizados. Cada corpo, ideia e composição é diferente — e é precisamente isso que torna cada tatuagem única.</p></div><div class="gallery"><figure><img src="TATTOO01.jpeg" alt="Tatuagem WILD 01" loading="lazy"></figure><figure><img src="TATTOO02.jpeg" alt="Tatuagem WILD 02" loading="lazy"></figure><figure><img src="TATTOO03.jpeg" alt="Tatuagem WILD 03" loading="lazy"></figure><figure><img src="TATTOO04.jpeg" alt="Tatuagem WILD 04" loading="lazy"></figure><figure><img src="TATTOO05.jpeg" alt="Tatuagem WILD 05" loading="lazy"></figure><figure><img src="TATTOO06.jpeg" alt="Tatuagem WILD 06" loading="lazy"></figure><figure><img src="TATTOO07.jpeg" alt="Tatuagem WILD 07" loading="lazy"></figure><figure><img src="TATTOO08.jpeg" alt="Tatuagem WILD 08" loading="lazy"></figure><figure><img src="TATTOO09.jpeg" alt="Tatuagem WILD 09" loading="lazy"></figure><figure><img src="TATTOO10.jpeg" alt="Tatuagem WILD 10" loading="lazy"></figure><figure><img src="TATTOO11.jpeg" alt="Tatuagem WILD 11" loading="lazy"></figure><figure><img src="TATTOO12.jpeg" alt="Tatuagem WILD 12" loading="lazy"></figure></div></section>
 
-  <main>
+  <section id="cuidados"><div class="section-head"><div><small>04 · CUIDADOS</small><h2>ANTES &<br>DEPOIS.</h2></div><p>Uma boa cicatrização também faz parte do resultado. Na sessão recebes sempre instruções adequadas ao teu caso.</p></div><div class="care"><div class="care-card"><h3>ANTES DA SESSÃO</h3><ul><li>Descansa bem na noite anterior.</li><li>Come antes da sessão e mantém-te hidratado.</li><li>Evita exposição solar intensa na zona a tatuar.</li><li>Usa roupa confortável e com acesso fácil à zona.</li></ul></div><div class="care-card"><h3>DEPOIS DA SESSÃO</h3><ul><li>Segue as instruções de lavagem e proteção fornecidas.</li><li>Não retires crostas nem coces a zona.</li><li>Evita piscina, praia e sol direto durante a cicatrização.</li><li>Em caso de dúvida sobre a cicatrização, fala connosco.</li></ul></div></div></section>
 
-    <!-- SECÇÃO 01: HERO (main > section:first-of-type) -->
-    <section id="inicio">
-      <p>Studio Autoral</p>
-      <h1>SKIN IS THE<br><span>CANVAS.</span></h1>
-      <p>
-        O teu corpo. A tua história. A nossa arte.
-        <span>Tatuagens personalizadas, linhas finas e contrastes marcantes.</span>
-      </p>
-      <div>
-        <a href="#work">VER TRABALHOS ↗</a>
-        <a href="#contacto">PEDIR ORÇAMENTO</a>
-      </div>
-    </section>
+  <section id="faq"><div class="section-head"><div><small>05 · FAQ</small><h2>PERGUNTAS<br>FREQUENTES.</h2></div><p>As dúvidas mais comuns antes de marcar.</p></div><div class="faq"><details><summary>Como peço um orçamento?</summary><p>Envia por WhatsApp ou Instagram a tua ideia, imagens de referência, tamanho aproximado em centímetros e zona do corpo.</p></details><details><summary>Fazem desenhos personalizados?</summary><p>Sim. O projeto pode ser criado do zero ou adaptado a partir das tuas referências, conforme o tipo de tatuagem.</p></details><details><summary>Fazem cover-up?</summary><p>Sim, mediante avaliação. Envia uma fotografia nítida da tatuagem atual, tamanho e zona para percebermos as possibilidades.</p></details><details><summary>É necessário sinal para reservar?</summary><p>Algumas marcações podem exigir sinal de reserva, principalmente quando existe preparação prévia de desenho. As condições são explicadas antes da confirmação.</p></details><details><summary>Como devo preparar-me para a sessão?</summary><p>Dorme bem, alimenta-te, bebe água e evita apanhar sol na zona. Se houver alguma condição relevante para a sessão, informa antes da marcação.</p></details></div></section>
 
-    <!-- SECÇÃO 02: MANIFESTO (#tattoo.manifesto-section) -->
-    <section id="tattoo" class="manifesto-section">
-      <p>Manifesto</p>
-      <h2>WE DON'T<br><span>FOLLOW</span><br>THE LINE.</h2>
-      <p class="manifesto-desc">
-        A WILD junta arte, precisão e personalização. Cada peça é desenhada à medida, transformando a tua ideia numa tatuagem com identidade própria e durabilidade técnica.
-      </p>
-    </section>
-
-    <!-- FAIXA DESLIZANTE (MARQUEE) -->
-    <div class="marquee-wrapper">
-      <div class="marquee-track">
-        <span>TATTOO ● FINE LINE ● EXCLUSIVITY ● BLACKWORK ● AUTORAL ● TATTOO ● FINE LINE ● EXCLUSIVITY ● BLACKWORK ● AUTORAL ● </span>
-        <span>TATTOO ● FINE LINE ● EXCLUSIVITY ● BLACKWORK ● AUTORAL ● TATTOO ● FINE LINE ● EXCLUSIVITY ● BLACKWORK ● AUTORAL ● </span>
-      </div>
-    </div>
-
-    <!-- SECÇÃO 03: SERVIÇOS (section:nth-of-type(3)) -->
-    <section>
-      <div>
-        <div>
-          <div>
-            <h2>ARTE NA<br><span>PELE.</span></h2>
-          </div>
-          <p>Três pilares. Uma só linguagem visual.</p>
-        </div>
-
-        <div>
-          <!-- Cartão 01 -->
-          <article>
-            <span>01</span>
-            <div>✦</div>
-            <h3>AUTORAL</h3>
-            <p>Peças desenhadas do zero pensadas exclusivamente para ti.</p>
-            <ul>
-              <li>Desenhos únicos e personalizados</li>
-              <li>Estudo anatómico e proporções</li>
-              <li>Acompanhamento pré-sessão</li>
-            </ul>
-            <a href="#contacto">PEDIR ORÇAMENTO →</a>
-          </article>
-
-          <!-- Cartão 02 -->
-          <article>
-            <span>02</span>
-            <div>◒</div>
-            <h3>FINE LINE</h3>
-            <p>Traços finos, limpos e micro-detalhes de alta definição.</p>
-            <ul>
-              <li>Linhas limpas e botânica</li>
-              <li>Caligrafia e lettering subtil</li>
-              <li>Cicatrização leve e delicada</li>
-            </ul>
-            <a href="#contacto">PEDIR ORÇAMENTO →</a>
-          </article>
-
-          <!-- Cartão 03 -->
-          <article>
-            <span>03</span>
-            <div>⌁</div>
-            <h3>FLASH &amp; COVER</h3>
-            <p>Desenhos autorais disponíveis ou cobertura de trabalhos antigos.</p>
-            <ul>
-              <li>Flashes autorais exclusivos</li>
-              <li>Coberturas e restauros (Cover-up)</li>
-              <li>Materiais 100% esterilizados</li>
-            </ul>
-            <a href="#contacto">PEDIR ORÇAMENTO →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECÇÃO 04: GALERIA (#work / section:nth-of-type(4)) -->
-    <section id="work">
-      <div>
-        <div>
-          <div class="work-title-line"></div>
-          <h2>FEITO<br><span>PELA WILD.</span></h2>
-        </div>
-
-        <div>
-          <div>
-            <!-- As 12 tatuagens em grelha 3 colunas desktop / 1 coluna mobile -->
-            <article><img alt="Tatuagem 01" src="TATTOO01.jpeg"></article>
-            <article><img alt="Tatuagem 02" src="TATTOO02.jpeg"></article>
-            <article><img alt="Tatuagem 03" src="TATTOO03.jpeg"></article>
-            <article><img alt="Tatuagem 04" src="TATTOO04.jpeg"></article>
-            <article><img alt="Tatuagem 05" src="TATTOO05.jpeg"></article>
-            <article><img alt="Tatuagem 06" src="TATTOO06.jpeg"></article>
-            <article><img alt="Tatuagem 07" src="TATTOO07.jpeg"></article>
-            <article><img alt="Tatuagem 08" src="TATTOO08.jpeg"></article>
-            <article><img alt="Tatuagem 09" src="TATTOO09.jpeg"></article>
-            <article><img alt="Tatuagem 10" src="TATTOO10.jpeg"></article>
-            <article><img alt="Tatuagem 11" src="TATTOO11.jpeg"></article>
-            <article><img alt="Tatuagem 12" src="TATTOO12.jpeg"></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECÇÃO 05: MANIFESTO MINDSET (.mindset-section) -->
-    <section class="mindset-section">
-      <p class="mindset-tag">Mindset</p>
-      <h2>“A TUA IDEIA NÃO PRECISA DE PARECER COM TODAS AS OUTRAS.”</h2>
-      <p class="mindset-sub">
-        Seja na pele ou na vida, criamos algo que tenha personalidade. Menos genérico. <span>Mais WILD.</span>
-      </p>
-    </section>
-    
-    <!-- SECÇÃO 06: PERGUNTAS FREQUENTES (FAQ) -->
-    <section id="faq" class="faq-section">
-      <p class="faq-tag">FAQ</p>
-      <h2>PERGUNTAS<br><span>FREQUENTES.</span></h2>
-
-      <div class="faq-container">
-        <!-- FAQ 01 -->
-        <details class="faq-card">
-          <summary class="faq-header">
-            <span>Como posso agendar uma sessão de tatuagem?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-content">
-            <p>Envia-nos a tua ideia por WhatsApp ou Instagram com a zona do corpo, tamanho aproximado em centímetros e imagens de referência para podermos dar o orçamento e agendar a data.</p>
-          </div>
-        </details>
-
-        <!-- FAQ 02 -->
-        <details class="faq-card">
-          <summary class="faq-header">
-            <span>Qual é o valor mínimo de uma tatuagem?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-content">
-            <p>O valor depende do tamanho, complexidade e detalhe do projeto. Cada orçamento é calculado de forma personalizada após o envio da ideia.</p>
-          </div>
-        </details>
-
-        <!-- FAQ 03 -->
-        <details class="faq-card">
-          <summary class="faq-header">
-            <span>Fazem projetos de tatuagem 100% exclusivos?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-content">
-            <p>Sim. Todos os projetos e flashes podem ser adaptados ou criados do zero para garantir uma peça única desenhada especificamente para ti.</p>
-          </div>
-        </details>
-
-        <!-- FAQ 04 -->
-        <details class="faq-card">
-          <summary class="faq-header">
-            <span>Quais são os cuidados a ter antes e depois de tatuar?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-content">
-            <p>Antes da sessão: hidrata a pele, evita exposição solar intensa e descansa bem. Após a sessão, fornecemos todas as instruções detalhadas de cicatrização e lavagem para garantir que a tatuagem fica perfeita.</p>
-          </div>
-        </details>
-
-        <!-- FAQ 05 -->
-        <details class="faq-card">
-          <summary class="faq-header">
-            <span>Quais são as modalidades de pagamento disponíveis?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-content">
-            <p>Aceitamos MB WAY, transferência bancária e numerário. Para agendamentos, é solicitado um sinal de reserva.</p>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <!-- SECÇÃO 07: CONTACTO / CALL TO ACTION (section:nth-of-type(7) / .cta-section) -->
-    <section id="contacto" class="cta-section">
-      <h2>LET'S MAKE<br><span>SOMETHING WILD.</span></h2>
-      <p class="cta-desc">
-        Queres marcar uma tatuagem ou tirar dúvidas sobre o teu projeto? Conta-nos a tua ideia.
-      </p>
-      <div class="cta-buttons">
-        <a href="https://instagram.com/wild.tattooo" target="_blank" rel="noopener" class="btn-instagram">INSTAGRAM ↗</a>
-        <a href="https://wa.me/351912886085" target="_blank" rel="noopener" class="btn-whatsapp">WHATSAPP ↗</a>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- RODAPÉ -->
-  <footer>
-    <div>
-      <strong>WILD<span>.</span></strong>
-      <span>TATTOO STUDIO</span>
-      <span>© 2026</span>
-    </div>
-  </footer>
-
-  <!-- SCRIPT DO MENU HAMBÚRGUER MOBILE -->
-  <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const links = document.querySelectorAll('.nav-links a');
-
-    if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-      });
-
-      links.forEach(link => {
-        link.addEventListener('click', () => {
-          menuToggle.classList.remove('active');
-          navLinks.classList.remove('active');
-        });
-      });
-    }
-  </script>
-
+  <section class="contact" id="contacto"><span class="tag">VAMOS TATUAR?</span><h2>TENS UMA<br>IDEIA?</h2><p>Envia-nos a tua referência, tamanho aproximado e zona do corpo. Respondemos com orçamento e disponibilidade.</p><div class="buttons" style="justify-content:center"><a class="btn whatsapp" href="https://wa.me/351912886085?text=Olá%20WILD!%20Gostava%20de%20pedir%20um%20orçamento%20para%20uma%20tatuagem." target="_blank" rel="noopener">WHATSAPP →</a><a class="btn primary" href="https://instagram.com/wild.tattooo" target="_blank" rel="noopener">INSTAGRAM ↗</a></div></section>
+</main>
+<footer><strong>WILD<span>.</span></strong><span>TATTOO STUDIO · AMARANTE</span><span>© 2026</span></footer>
+<script>const b=document.querySelector('.menu-toggle'),n=document.querySelector('.nav-links');if(b&&n){b.addEventListener('click',()=>n.classList.toggle('active'));document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>n.classList.remove('active')))}</script>
 </body>
 </html>
