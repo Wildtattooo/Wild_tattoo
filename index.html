@@ -5,236 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WILD. — Tattoo Studio & Design</title>
   <meta name="description" content="WILD Tattoo Studio & Design. Escolhe entre tatuagem ou serviços de design, websites, lojas online e redes sociais.">
-  <meta name="theme-color" content="#0b0b0c">
+  <meta name="theme-color" content="#0b0b0b">
   <link rel="icon" type="image/jpeg" href="logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
   <style>
-    * { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      min-height: 100%;
-      background: #0b0b0c;
-      color: #fff;
-      font-family: 'DM Sans', sans-serif;
-    }
-
-    body { overflow-x: hidden; }
-
-    .split-hero {
-      display: flex;
-      min-height: 100svh;
-      width: 100%;
-      position: relative;
-      background: #0b0b0c;
-    }
-
-    .split-panel {
-      flex: 1;
-      min-width: 0;
-      min-height: 100svh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-      padding: 5rem 2.2rem 3rem;
-      text-align: center;
-      color: #fff;
-      text-decoration: none;
-      transition: flex .55s cubic-bezier(.2,.8,.2,1);
-    }
-
-    .split-panel::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background: linear-gradient(180deg, rgba(0,0,0,.30), rgba(0,0,0,.72));
-      transition: background .45s ease;
-    }
-
-    .panel-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      background-size: cover;
-      background-position: center;
-      filter: grayscale(92%) brightness(.42);
-      transform: scale(1.02);
-      transition: filter .55s ease, transform .7s ease;
-    }
-
-    .panel-tattoo .panel-bg {
-      background-image: url('TATTOO01.jpeg');
-    }
-
-    .panel-design .panel-bg {
-      background-image:
-        linear-gradient(135deg, rgba(10,10,10,.25), rgba(10,10,10,.72)),
-        url('logo.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    .panel-content {
-      position: relative;
-      z-index: 2;
-      width: min(100%, 520px);
-    }
-
-    .panel-tag {
-      display: inline-block;
-      margin-bottom: 1rem;
-      color: #e5ff00;
-      font-size: .76rem;
-      font-weight: 700;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-    }
-
-    .split-panel h1,
-    .split-panel h2 {
-      margin: 0;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(3rem, 5.4vw, 6rem);
-      line-height: .9;
-      letter-spacing: -.06em;
-      text-transform: uppercase;
-    }
-
-    .split-panel p {
-      max-width: 430px;
-      margin: 1.4rem auto 2rem;
-      color: rgba(255,255,255,.72);
-      font-size: clamp(.96rem, 1.2vw, 1.08rem);
-      line-height: 1.7;
-    }
-
-    .split-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: .9rem 1.45rem;
-      border: 1px solid rgba(255,255,255,.8);
-      border-radius: 999px;
-      color: #fff;
-      font-size: .82rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      transition: background .3s ease, color .3s ease, border-color .3s ease, transform .3s ease;
-    }
-
-    .panel-tattoo .split-btn {
-      background: #e5ff00;
-      border-color: #e5ff00;
-      color: #080808;
-    }
-
-    .center-logo {
-      position: absolute;
-      top: 2rem;
-      left: 50%;
-      z-index: 20;
-      transform: translateX(-50%);
-      display: flex;
-      align-items: center;
-      gap: .65rem;
-      padding: .58rem .95rem .58rem .62rem;
-      background: rgba(8,8,8,.58);
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 999px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      pointer-events: none;
-      box-shadow: 0 10px 35px rgba(0,0,0,.18);
-    }
-
-    .center-logo img {
-      width: 30px;
-      height: 30px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
-    .center-logo strong {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: .9rem;
-      letter-spacing: .14em;
-    }
-
-    .center-logo strong span { color: #e5ff00; }
-
-    .divider {
-      position: absolute;
-      z-index: 15;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 1px;
-      background: rgba(255,255,255,.16);
-      pointer-events: none;
-    }
-
-    @media (hover: hover) and (min-width: 901px) {
-      .split-panel:hover { flex: 1.17; }
-
-      .split-panel:hover .panel-bg {
-        filter: grayscale(15%) brightness(.62);
-        transform: scale(1.08);
-      }
-
-      .split-panel:hover::after {
-        background: linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,.55));
-      }
-
-      .split-panel:hover .split-btn { transform: translateY(-2px); }
-      .panel-tattoo:hover .split-btn { background: #fff; border-color: #fff; }
-      .panel-design:hover .split-btn { background: #fff; color: #090909; }
-    }
-
-    @media (max-width: 900px) {
-      .split-hero { flex-direction: column; }
-
-      .split-panel {
-        min-height: 50svh;
-        padding: 5rem 1.4rem 2.5rem;
-      }
-
-      .split-panel h1,
-      .split-panel h2 {
-        font-size: clamp(2.6rem, 13vw, 4.4rem);
-      }
-
-      .split-panel p {
-        margin: 1rem auto 1.45rem;
-        line-height: 1.55;
-      }
-
-      .center-logo {
-        position: fixed;
-        top: .85rem;
-      }
-
-      .divider {
-        top: 50%;
-        bottom: auto;
-        left: 0;
-        width: 100%;
-        height: 1px;
-      }
-    }
+    :root{--black:#0b0b0b;--yellow:#dfff00;--white:#fff;--cream:#f3f0e9}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif}
+    body{overflow-x:hidden}
+    .split-hero{display:flex;min-height:100svh;width:100%;position:relative;background:var(--black)}
+    .split-panel{flex:1;min-width:0;min-height:100svh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:8rem 2.2rem 3rem;text-align:center;color:#fff;text-decoration:none;transition:flex .55s cubic-bezier(.2,.8,.2,1)}
+    .split-panel::after{content:'';position:absolute;inset:0;z-index:1;transition:.45s ease}
+    .panel-tattoo::after{background:linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,.78))}
+    .panel-design::after{background:linear-gradient(145deg,rgba(11,11,11,.93),rgba(11,11,11,.78))}
+    .panel-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;transition:filter .55s ease,transform .7s ease}
+    .panel-tattoo .panel-bg{background-image:url('TATTOO01.jpeg');filter:grayscale(82%) brightness(.48);transform:scale(1.02)}
+    .panel-design .panel-bg{background-image:linear-gradient(rgba(223,255,0,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(223,255,0,.06) 1px,transparent 1px);background-size:42px 42px;background-position:center;opacity:.7}
+    .panel-design::before{content:'';position:absolute;width:430px;height:430px;border-radius:50%;background:var(--yellow);filter:blur(130px);opacity:.10;z-index:0;right:-120px;top:18%}
+    .panel-content{position:relative;z-index:2;width:min(100%,520px)}
+    .panel-tag{display:inline-block;margin-bottom:1rem;color:var(--yellow);font-size:.76rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+    .split-panel h1,.split-panel h2{margin:0;font-family:'Space Grotesk',sans-serif;font-size:clamp(3rem,5.4vw,6rem);line-height:.9;letter-spacing:-.06em;text-transform:uppercase}
+    .panel-design h2 span{color:var(--yellow)}
+    .split-panel p{max-width:430px;margin:1.4rem auto 2rem;color:rgba(255,255,255,.74);font-size:clamp(.96rem,1.2vw,1.08rem);line-height:1.7}
+    .split-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:.95rem 1.55rem;border:1px solid var(--yellow);border-radius:999px;background:var(--yellow);color:var(--black);font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;transition:.3s ease}
+    .brand-logo{position:absolute;top:1.35rem;left:50%;z-index:30;transform:translateX(-50%);width:112px;height:112px;border-radius:50%;padding:7px;background:var(--black);border:2px solid var(--yellow);box-shadow:0 0 0 7px rgba(11,11,11,.75),0 0 35px rgba(223,255,0,.18);pointer-events:none}
+    .brand-logo img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
+    .divider{position:absolute;z-index:15;top:0;bottom:0;left:50%;width:1px;background:rgba(223,255,0,.32);pointer-events:none}
+    @media (hover:hover) and (min-width:901px){.split-panel:hover{flex:1.16}.panel-tattoo:hover .panel-bg{filter:grayscale(12%) brightness(.62);transform:scale(1.08)}.panel-design:hover .panel-bg{opacity:1;transform:scale(1.03)}.split-panel:hover .split-btn{transform:translateY(-3px);background:#fff;border-color:#fff}}
+    @media (max-width:900px){.split-hero{flex-direction:column}.split-panel{min-height:50svh;padding:7rem 1.4rem 2.5rem}.split-panel h1,.split-panel h2{font-size:clamp(2.6rem,13vw,4.4rem)}.split-panel p{margin:1rem auto 1.45rem;line-height:1.55}.brand-logo{position:fixed;top:.7rem;width:82px;height:82px;padding:5px}.divider{top:50%;bottom:auto;left:0;width:100%;height:1px}}
   </style>
 </head>
 <body>
-  <div class="center-logo" aria-hidden="true">
-    <img src="logo.jpg" alt="">
-    <strong>WILD<span>.</span></strong>
+  <div class="brand-logo" aria-hidden="true">
+    <img src="logo.jpg" alt="WILD">
   </div>
 
   <main class="split-hero" aria-label="Escolher área WILD">
@@ -252,12 +57,11 @@
       <div class="panel-bg"></div>
       <div class="panel-content">
         <span class="panel-tag">Design & Digital</span>
-        <h2>DESIGN<br>&amp; WEB</h2>
+        <h2>DESIGN<br><span>&amp; WEB</span></h2>
         <p>Websites, lojas online, gestão de redes sociais, design gráfico e identidade visual.</p>
         <span class="split-btn">Entrar em Design →</span>
       </div>
     </a>
-
     <div class="divider" aria-hidden="true"></div>
   </main>
 </body>
