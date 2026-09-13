@@ -67,6 +67,26 @@
       <div class="invite-code"><small>CÓDIGO DO CONVITE</small><strong id="invite-code">WILD-XXXXXX</strong></div>
       <a class="button button-primary" id="book-whatsapp" href="#" target="_blank" rel="noopener">Pedir orçamento no WhatsApp <span>→</span></a>
     </section>
+    <section class="status-lookup" id="consultar-cupao" aria-labelledby="status-title-section">
+      <div class="status-intro">
+        <p class="eyebrow">CONSULTAR CUPÃO</p>
+        <h2 id="status-title-section">VÊ O ESTADO<br>DA TUA OFERTA.</h2>
+        <p>Introduz o código WILD para saber se a recompensa ainda está pendente, já foi desbloqueada ou já foi utilizada.</p>
+      </div>
+      <div class="status-panel">
+        <form class="status-form" id="status-form" novalidate>
+          <div class="field"><label for="status-code-input">Código do cupão</label><input id="status-code-input" name="code" type="text" maxlength="11" autocomplete="off" spellcheck="false" placeholder="WILD-XXXXXX" required></div>
+          <button class="button button-primary" id="status-button" type="submit">Pesquisar código <span>→</span></button>
+        </form>
+        <p class="status-message" id="status-message" role="alert" aria-live="polite"></p>
+        <article class="status-card" id="status-result" hidden aria-live="polite">
+          <div class="status-card-top"><small>CÓDIGO</small><strong id="status-code-output">WILD-XXXXXX</strong></div>
+          <span class="status-badge" id="status-badge">PENDENTE</span>
+          <h3 id="status-result-title">À ESPERA DO AMIGO</h3>
+          <p id="status-description">A recompensa ainda não foi desbloqueada.</p>
+        </article>
+      </div>
+    </section>
     <section class="terms-summary" aria-labelledby="terms-title">
       <div><p class="eyebrow">SEM LETRAS PEQUENINAS</p><h2 id="terms-title">CONDIÇÕES<br>SIMPLES.</h2></div>
       <ul><li>A oferta é válida para uma tatuagem simples até 10 cm, sujeita à avaliação do desenho e da zona do corpo.</li><li>A recompensa só fica ativa depois de o amigo concluir e pagar a tatuagem associada ao código.</li><li>Cada código é pessoal, de utilização única, não acumulável e não pode ser trocado por dinheiro.</li><li>A marcação depende da disponibilidade da WILD Tattoo e das condições normais do estúdio.</li></ul>
